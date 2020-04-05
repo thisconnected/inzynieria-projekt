@@ -15,6 +15,8 @@
     <DEPENDENCIES>
       <COMP relation="OwnedBehavior">
         <COMPID name="kupic z hurtowni" mc="Standard.BpmnProcess" uid="ad70bb3b-1b01-4185-a200-a8416479f1a7"/>
+        <COMPID name="realizacja zamowienia" mc="Standard.BpmnProcess" uid="9b6a470a-ece9-421e-a966-11a7d56d243b"/>
+        <COMPID name="Collaboration" mc="Standard.BpmnCollaboration" uid="65b42a00-3117-423d-a7e8-c884f18ff5e1"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>

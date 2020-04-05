@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Zewnetrzne" version="4">
+  <OBJECT>
+    <ID name="Zewnetrzne" mc="Standard.Package" uid="91d9957a-a924-4c35-94e6-1c1af81da4e0"/>
+    <PID name="Zamówienia" mc="Standard.Project" uid="24e8c5e3-a104-48a2-a005-14fe84c6a458"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Zewnetrzne]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="Hurtownia" mc="Standard.BpmnProcess" uid="7d35f03c-1294-4031-b4bc-82fbfe206ba2"/>
+        <COMPID name="Hurtownia zamowienie" mc="Standard.BpmnProcess" uid="fec64fee-ac5e-4080-ae4a-dce9debb69c4"/>
+        <COMPID name="Invoking process" mc="Standard.BpmnProcess" uid="416172f8-73af-4664-9882-02ecf7a0a296"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

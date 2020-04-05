@@ -1,0 +1,344 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Collaboration" version="4">
+  <OBJECT>
+    <ID name="Collaboration" mc="Standard.BpmnCollaboration" uid="65b42a00-3117-423d-a7e8-c884f18ff5e1"/>
+    <PID name="zamówienia" mc="Standard.Package" uid="12b18c5f-2680-49af-8141-67a85d6a1810"/>
+    <ATTRIBUTES>
+      <ATT name="IsClosed">false</ATT>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[Collaboration]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="MessageFlow">
+        <OBJECT>
+          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="e495b6e3-5983-429a-935c-b672f786940d"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="Wysłanie zamowienia do hurtowni" mc="Standard.BpmnIntermediateThrowEvent" uid="b918e25b-7360-45a8-9b78-c14a509e5583"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="zamowienie" mc="Standard.BpmnStartEvent" uid="13720331-3c53-4051-97af-acaedeeba343"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="Standard.BpmnMessageFlow" uid="fbfd479e-a65d-4ebe-98d7-2278dc5e81e7"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="wyslij ponownie" mc="Standard.BpmnIntermediateThrowEvent" uid="e66b6a0f-2766-4b44-ab58-920a031dc58b"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="Wyslij ponownie" mc="Standard.BpmnStartEvent" uid="5694c2d3-5045-42a7-a443-97b8dc28b589"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="d623f254-bdb0-4d04-a971-13e47caf5a06"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="" mc="Standard.BpmnEndEvent" uid="f7d7d189-fc01-427b-ae80-68697a03ebbb"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="Towar przyszedł" mc="Standard.BpmnBoundaryEvent" uid="e54a731a-4a36-4f17-9ef5-5071802a1766"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="46861212-6db4-4c85-9288-b9b6e436bbae"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="Wysłanie platnosci" mc="Standard.BpmnIntermediateThrowEvent" uid="ee181703-3207-44bd-91af-8507f3643d59"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="Potwierdzenie płatności" mc="Standard.BpmnBoundaryEvent" uid="2960bd5c-ba89-4b8b-ba52-e909b41dbfaf"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="4f7a7bfc-a7c7-4cf9-89bb-b275730c21bd"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="Potwierdzenie" mc="Standard.BpmnIntermediateThrowEvent" uid="af75bb4c-f940-4f58-87bd-4e572460f6d9"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="Potwierdzenie" mc="Standard.BpmnBoundaryEvent" uid="1186ecca-2d4d-4d53-acc6-83392d4863d6"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="dc30a3b8-184c-4232-af5e-af710f9b0960"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="Wysłanie zapytania do hurtowni" mc="Standard.BpmnIntermediateThrowEvent" uid="b58ae760-c7a9-456a-ae6e-62c44b3cbc47"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="Start" mc="Standard.BpmnStartEvent" uid="5852bb9a-425e-46b5-a731-c1be38de9107"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="ed933a4e-349c-4240-a846-460d104a6ccd"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="Cena" mc="Standard.BpmnEndEvent" uid="04d93794-e67b-4343-8722-0b1fa86a1b46"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="Otrzymanie informacji od hurtowni" mc="Standard.BpmnIntermediateCatchEvent" uid="3676fd9b-8128-4f65-972e-c1bb0ba5d5ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="4797c290-01a2-4989-9da5-7abeb6433580"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="Brak produktu" mc="Standard.BpmnEndEvent" uid="51132d50-3e72-480e-bf48-3d0974d8c173"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="Otrzymanie informacji od hurtowni" mc="Standard.BpmnIntermediateCatchEvent" uid="3676fd9b-8128-4f65-972e-c1bb0ba5d5ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="516ab08e-a4d9-49c3-aef1-c806092742f6"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="Invoking process" mc="Standard.BpmnParticipant" uid="1cc41cbc-79a8-423d-87c5-c4d0e06e90b2"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="zapotrzebowanie o produkt" mc="Standard.BpmnStartEvent" uid="a09fe1db-11c8-4636-a768-7889aeb5f542"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="f569f824-0497-4b88-869d-d5bb90e2aaab"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="Cena towaru" mc="Standard.BpmnEndEvent" uid="0b1ee38f-3d24-4fc6-afa1-59f7b15fee04"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="Invoking process" mc="Standard.BpmnParticipant" uid="1cc41cbc-79a8-423d-87c5-c4d0e06e90b2"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="d8d78f15-bf5a-4e2a-b33f-0d82637f8259"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="Nie ma towaru" mc="Standard.BpmnEndEvent" uid="c240c937-ebd6-40b5-ba01-2c302f52a8fa"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="Invoking process" mc="Standard.BpmnParticipant" uid="1cc41cbc-79a8-423d-87c5-c4d0e06e90b2"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="c2365155-8336-4ead-b7a2-8cd969cee386"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="Towar zamówiony" mc="Standard.BpmnIntermediateThrowEvent" uid="db1301af-4f96-465f-8b85-f9b7fee7650c"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="Invoking process" mc="Standard.BpmnParticipant" uid="1cc41cbc-79a8-423d-87c5-c4d0e06e90b2"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="ff45c6d8-6e9f-4e5c-a1e1-ac7c1d33994a"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="Akceptacja ceny" mc="Standard.BpmnIntermediateThrowEvent" uid="c413f2a9-c046-4d8a-a56e-63bb4e857799"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="Invoking process" mc="Standard.BpmnParticipant" uid="1cc41cbc-79a8-423d-87c5-c4d0e06e90b2"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="17e5ebd8-a2cf-4649-92aa-1b519fd317cb"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="Invoking process" mc="Standard.BpmnParticipant" uid="1cc41cbc-79a8-423d-87c5-c4d0e06e90b2"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="Decyzja" mc="Standard.BpmnIntermediateCatchEvent" uid="0b65cde1-359e-48e8-bbb1-594c3ead1950"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Participants">
+        <OBJECT>
+          <ID name="kupic z hurtowni" mc="Standard.BpmnParticipant" uid="b4848295-ee0b-4d63-a989-0e4653538824"/>
+          <ATTRIBUTES>
+            <ATT name="MultiplicityMin">0</ATT>
+            <ATT name="MultiplicityMax">0</ATT>
+            <ATT name="Name"><![CDATA[kupic z hurtowni]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Process">
+              <ID name="kupic z hurtowni" mc="Standard.BpmnProcess" uid="ad70bb3b-1b01-4185-a200-a8416479f1a7"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Hurtownia" mc="Standard.BpmnParticipant" uid="59f53604-50dc-48cc-90df-78c7c1edb2b9"/>
+          <ATTRIBUTES>
+            <ATT name="MultiplicityMin">0</ATT>
+            <ATT name="MultiplicityMax">0</ATT>
+            <ATT name="Name"><![CDATA[Hurtownia]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Process">
+              <ID name="Hurtownia" mc="Standard.BpmnProcess" uid="7d35f03c-1294-4031-b4bc-82fbfe206ba2"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Hurtownia zamowienie" mc="Standard.BpmnParticipant" uid="32a0d243-dc20-4916-9537-fc5516a28b67"/>
+          <ATTRIBUTES>
+            <ATT name="MultiplicityMin">0</ATT>
+            <ATT name="MultiplicityMax">0</ATT>
+            <ATT name="Name"><![CDATA[Hurtownia zamowienie]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Process">
+              <ID name="Hurtownia zamowienie" mc="Standard.BpmnProcess" uid="fec64fee-ac5e-4080-ae4a-dce9debb69c4"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Invoking process" mc="Standard.BpmnParticipant" uid="1cc41cbc-79a8-423d-87c5-c4d0e06e90b2"/>
+          <ATTRIBUTES>
+            <ATT name="MultiplicityMin">0</ATT>
+            <ATT name="MultiplicityMax">0</ATT>
+            <ATT name="Name"><![CDATA[Invoking process]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Process">
+              <ID name="Invoking process" mc="Standard.BpmnProcess" uid="416172f8-73af-4664-9882-02ecf7a0a296"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name=" Collaboration" mc="Standard.BpmnCollaborationDiagram" uid="108a6a83-44aa-4dd7-a9be-8c84ab136355"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
