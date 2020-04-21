@@ -78,7 +78,7 @@
                       <ID name="Nie ma towaru" mc="Standard.BpmnEndEvent" uid="c240c937-ebd6-40b5-ba01-2c302f52a8fa"/>
                     </REFOBJ>
                     <REFOBJ>
-                      <ID name="Baza hurtowni" mc="Standard.BpmnDataStore" uid="805008d5-f0a9-4c76-abed-a5096e19f89c"/>
+                      <ID name="Lista hurtowni" mc="Standard.BpmnDataStore" uid="805008d5-f0a9-4c76-abed-a5096e19f89c"/>
                     </REFOBJ>
                     <REFOBJ>
                       <ID name="wyslij ponownie" mc="Standard.BpmnIntermediateThrowEvent" uid="e66b6a0f-2766-4b44-ab58-920a031dc58b"/>
@@ -104,7 +104,7 @@
                 <DEPENDENCIES>
                   <LINK relation="FlowElementRef">
                     <REFOBJ>
-                      <ID name="Oczekiwanie na zamówienie" mc="Standard.BpmnTask" uid="c8bb071c-959d-4979-930a-06d3f91f21f7"/>
+                      <ID name="Oczekiwanie na towar" mc="Standard.BpmnTask" uid="c8bb071c-959d-4979-930a-06d3f91f21f7"/>
                     </REFOBJ>
                     <REFOBJ>
                       <ID name="" mc="Standard.BpmnExclusiveGateway" uid="6c5ab759-3015-4589-8d63-da206ed34e91"/>
@@ -143,7 +143,7 @@
                       <ID name="Akceptacja ceny" mc="Standard.BpmnIntermediateThrowEvent" uid="c413f2a9-c046-4d8a-a56e-63bb4e857799"/>
                     </REFOBJ>
                     <REFOBJ>
-                      <ID name="Decyzja" mc="Standard.BpmnIntermediateCatchEvent" uid="0b65cde1-359e-48e8-bbb1-594c3ead1950"/>
+                      <ID name="otrzymanie decyzji" mc="Standard.BpmnIntermediateCatchEvent" uid="0b65cde1-359e-48e8-bbb1-594c3ead1950"/>
                     </REFOBJ>
                     <REFOBJ>
                       <ID name="" mc="Standard.BpmnExclusiveGateway" uid="03099e58-be8f-4130-814c-9a0dc08d89bd"/>
@@ -314,7 +314,7 @@
                 <DEPENDENCIES>
                   <LINK relation="SourceRef">
                     <REFOBJ>
-                      <ID name="Baza hurtowni" mc="Standard.BpmnDataStore" uid="805008d5-f0a9-4c76-abed-a5096e19f89c"/>
+                      <ID name="Lista hurtowni" mc="Standard.BpmnDataStore" uid="805008d5-f0a9-4c76-abed-a5096e19f89c"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -706,7 +706,7 @@
             </LINK>
             <LINK relation="TargetRef">
               <REFOBJ>
-                <ID name="Oczekiwanie na zamówienie" mc="Standard.BpmnTask" uid="c8bb071c-959d-4979-930a-06d3f91f21f7"/>
+                <ID name="Oczekiwanie na towar" mc="Standard.BpmnTask" uid="c8bb071c-959d-4979-930a-06d3f91f21f7"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
@@ -1172,37 +1172,15 @@ czytanie z bazy -&gt; po kazdym rekordzie zapytanie czy jest produkt</p>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Baza hurtowni" mc="Standard.BpmnDataStore" uid="805008d5-f0a9-4c76-abed-a5096e19f89c"/>
+          <ID name="Lista hurtowni" mc="Standard.BpmnDataStore" uid="805008d5-f0a9-4c76-abed-a5096e19f89c"/>
           <ATTRIBUTES>
             <ATT name="Capacity">0</ATT>
             <ATT name="IsUnlimited">false</ATT>
             <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[Baza hurtowni]]></ATT>
+            <ATT name="Name"><![CDATA[Lista hurtowni]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES></DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="Towar przyszedł" mc="Standard.BpmnBoundaryEvent" uid="e54a731a-4a36-4f17-9ef5-5071802a1766"/>
-          <ATTRIBUTES>
-            <ATT name="CancelActivity">true</ATT>
-            <ATT name="ParallelMultiple">false</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[Towar przyszedł]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="EventDefinitions">
-              <OBJECT>
-                <ID name="" mc="Standard.BpmnMessageEventDefinition" uid="9e40edc4-1f6c-4349-9af3-eba2b7c4ea02"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
           <ID name="f26" mc="Standard.BpmnSequenceFlow" uid="6ae90bec-1e03-4095-88dc-d1cd45f3823e"/>
@@ -1249,14 +1227,14 @@ czytanie z bazy -&gt; po kazdym rekordzie zapytanie czy jest produkt</p>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Oczekiwanie na zamówienie" mc="Standard.BpmnTask" uid="c8bb071c-959d-4979-930a-06d3f91f21f7"/>
+          <ID name="Oczekiwanie na towar" mc="Standard.BpmnTask" uid="c8bb071c-959d-4979-930a-06d3f91f21f7"/>
           <ATTRIBUTES>
             <ATT name="IsGlobal">false</ATT>
             <ATT name="IsForCompensation">false</ATT>
             <ATT name="StartQuantity">1</ATT>
             <ATT name="CompletionQuantity">1</ATT>
             <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[Oczekiwanie na zamówienie]]></ATT>
+            <ATT name="Name"><![CDATA[Oczekiwanie na towar]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -1268,7 +1246,7 @@ czytanie z bazy -&gt; po kazdym rekordzie zapytanie czy jest produkt</p>
                 <ID name="14 dni" mc="Standard.BpmnBoundaryEvent" uid="5dbe6b1b-fbb5-4220-9f75-2b35585d1259"/>
               </REFOBJ>
               <REFOBJ>
-                <ID name="Towar przyszedł" mc="Standard.BpmnBoundaryEvent" uid="e54a731a-4a36-4f17-9ef5-5071802a1766"/>
+                <ID name="Towar otrzymany" mc="Standard.BpmnBoundaryEvent" uid="a96dbd56-718f-4075-822a-88f7f533557e"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
@@ -1584,7 +1562,7 @@ czytanie z bazy -&gt; po kazdym rekordzie zapytanie czy jest produkt</p>
             </LINK>
             <LINK relation="TargetRef">
               <REFOBJ>
-                <ID name="Oczekiwanie na zamówienie" mc="Standard.BpmnTask" uid="c8bb071c-959d-4979-930a-06d3f91f21f7"/>
+                <ID name="Oczekiwanie na towar" mc="Standard.BpmnTask" uid="c8bb071c-959d-4979-930a-06d3f91f21f7"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
@@ -1642,28 +1620,6 @@ czytanie z bazy -&gt; po kazdym rekordzie zapytanie czy jest produkt</p>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="f25" mc="Standard.BpmnSequenceFlow" uid="de4a6ec2-dff1-4f17-a091-665a3d1b42cd"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f25]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="Towar przyszedł" mc="Standard.BpmnBoundaryEvent" uid="e54a731a-4a36-4f17-9ef5-5071802a1766"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="Zmiana statusu zamówienia" mc="Standard.BpmnTask" uid="2c226cbc-7e72-4a2e-9b96-c8846bd27885"/>
-              </REFOBJ>
-            </LINK>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
@@ -1749,7 +1705,7 @@ czytanie z bazy -&gt; po kazdym rekordzie zapytanie czy jest produkt</p>
                 <ID name="Potwierdzenie" mc="Standard.BpmnBoundaryEvent" uid="1186ecca-2d4d-4d53-acc6-83392d4863d6"/>
               </REFOBJ>
               <REFOBJ>
-                <ID name="Timer" mc="Standard.BpmnBoundaryEvent" uid="ee240ae5-f07e-419e-a09b-93e382a1308e"/>
+                <ID name="Timer?" mc="Standard.BpmnBoundaryEvent" uid="ee240ae5-f07e-419e-a09b-93e382a1308e"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
@@ -1797,11 +1753,11 @@ czytanie z bazy -&gt; po kazdym rekordzie zapytanie czy jest produkt</p>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Decyzja" mc="Standard.BpmnIntermediateCatchEvent" uid="0b65cde1-359e-48e8-bbb1-594c3ead1950"/>
+          <ID name="otrzymanie decyzji" mc="Standard.BpmnIntermediateCatchEvent" uid="0b65cde1-359e-48e8-bbb1-594c3ead1950"/>
           <ATTRIBUTES>
             <ATT name="ParallelMultiple">false</ATT>
             <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[Decyzja]]></ATT>
+            <ATT name="Name"><![CDATA[otrzymanie decyzji]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -1919,7 +1875,7 @@ czytanie z bazy -&gt; po kazdym rekordzie zapytanie czy jest produkt</p>
             </LINK>
             <LINK relation="TargetRef">
               <REFOBJ>
-                <ID name="Decyzja" mc="Standard.BpmnIntermediateCatchEvent" uid="0b65cde1-359e-48e8-bbb1-594c3ead1950"/>
+                <ID name="otrzymanie decyzji" mc="Standard.BpmnIntermediateCatchEvent" uid="0b65cde1-359e-48e8-bbb1-594c3ead1950"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
@@ -1936,7 +1892,7 @@ czytanie z bazy -&gt; po kazdym rekordzie zapytanie czy jest produkt</p>
           <DEPENDENCIES>
             <LINK relation="SourceRef">
               <REFOBJ>
-                <ID name="Decyzja" mc="Standard.BpmnIntermediateCatchEvent" uid="0b65cde1-359e-48e8-bbb1-594c3ead1950"/>
+                <ID name="otrzymanie decyzji" mc="Standard.BpmnIntermediateCatchEvent" uid="0b65cde1-359e-48e8-bbb1-594c3ead1950"/>
               </REFOBJ>
             </LINK>
             <LINK relation="TargetRef">
@@ -1969,12 +1925,12 @@ czytanie z bazy -&gt; po kazdym rekordzie zapytanie czy jest produkt</p>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Timer" mc="Standard.BpmnBoundaryEvent" uid="ee240ae5-f07e-419e-a09b-93e382a1308e"/>
+          <ID name="Timer?" mc="Standard.BpmnBoundaryEvent" uid="ee240ae5-f07e-419e-a09b-93e382a1308e"/>
           <ATTRIBUTES>
             <ATT name="CancelActivity">true</ATT>
             <ATT name="ParallelMultiple">false</ATT>
             <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[Timer]]></ATT>
+            <ATT name="Name"><![CDATA[Timer?]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -2027,7 +1983,51 @@ czytanie z bazy -&gt; po kazdym rekordzie zapytanie czy jest produkt</p>
           <DEPENDENCIES>
             <LINK relation="SourceRef">
               <REFOBJ>
-                <ID name="Timer" mc="Standard.BpmnBoundaryEvent" uid="ee240ae5-f07e-419e-a09b-93e382a1308e"/>
+                <ID name="Timer?" mc="Standard.BpmnBoundaryEvent" uid="ee240ae5-f07e-419e-a09b-93e382a1308e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="Zmiana statusu zamówienia" mc="Standard.BpmnTask" uid="2c226cbc-7e72-4a2e-9b96-c8846bd27885"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Towar otrzymany" mc="Standard.BpmnBoundaryEvent" uid="a96dbd56-718f-4075-822a-88f7f533557e"/>
+          <ATTRIBUTES>
+            <ATT name="CancelActivity">true</ATT>
+            <ATT name="ParallelMultiple">false</ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[Towar otrzymany]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="EventDefinitions">
+              <OBJECT>
+                <ID name="" mc="Standard.BpmnMessageEventDefinition" uid="4f598888-ccca-4c87-ab6b-b88ab6e6fbf0"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="f25" mc="Standard.BpmnSequenceFlow" uid="fc42a9c2-3206-4840-b939-7c9c5e264c44"/>
+          <ATTRIBUTES>
+            <ATT name="IsImmediate">false</ATT>
+            <ATT name="ConditionExpression"></ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[f25]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="Towar otrzymany" mc="Standard.BpmnBoundaryEvent" uid="a96dbd56-718f-4075-822a-88f7f533557e"/>
               </REFOBJ>
             </LINK>
             <LINK relation="TargetRef">

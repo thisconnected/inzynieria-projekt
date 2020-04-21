@@ -1,0 +1,8 @@
+2020-04-21
+budowanie interfejsu na uproszczonym schemacie kolaboracji tylko wiadomosci pomiedzy basenem
+
+oczekiwanie na towar -> na bramke sterowane zdarzeniami
+
+nie tylko cena (np czas przesylki
+
+3ci tor plywacki decyzja (wybranie ceny)
