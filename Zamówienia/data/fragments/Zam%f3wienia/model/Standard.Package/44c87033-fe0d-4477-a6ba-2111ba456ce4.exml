@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="DPU2" version="4">
+  <OBJECT>
+    <ID name="DPU2" mc="Standard.Package" uid="44c87033-fe0d-4477-a6ba-2111ba456ce4"/>
+    <PID name="Zamówienia" mc="Standard.Project" uid="24e8c5e3-a104-48a2-a005-14fe84c6a458"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[DPU2]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Magazyn" mc="Standard.Actor" uid="e589bf9a-8f19-4205-aff3-c6689c34de0a"/>
+        <COMPID name="zapytanie do hurtowni" mc="Standard.UseCase" uid="f08be49f-725a-461b-bf01-a3f41592e06d"/>
+        <COMPID name="Dział Kontakt z Hurtownia" mc="Standard.Actor" uid="07276be0-cbc0-48c5-86e0-a4374c8b4fbe"/>
+        <COMPID name="obsługa zamówien" mc="Standard.Actor" uid="3697d343-0c98-4368-a67c-eb0355ed7e35"/>
+        <COMPID name="Hurtownia" mc="Standard.Actor" uid="cb351022-227d-4d82-a97f-98ebf9859b11"/>
+        <COMPID name="Płatności" mc="Standard.Actor" uid="ed3a186b-9f48-48a3-93ec-a409a6ff4970"/>
+        <COMPID name="Kierownik" mc="Standard.Actor" uid="cfc887bf-22fa-46c9-8e30-7e85274318d4"/>
+        <COMPID name="zapotrzebowanie" mc="Standard.UseCase" uid="8af31489-04ec-49bb-b7a5-03d8d287fe7d"/>
+        <COMPID name="Wybranie oferty" mc="Standard.UseCase" uid="352222f0-f817-4a14-9483-85ac4a38e6d9"/>
+        <COMPID name="realizacja zamowienia" mc="Standard.UseCase" uid="3774fe80-3853-4071-a7ac-89fe65e0e29f"/>
+        <COMPID name="Płatność" mc="Standard.UseCase" uid="f158a3c6-0b52-4551-adca-046e6ab97b44"/>
+        <COMPID name="Przedstawienie ceny" mc="Standard.UseCase" uid="53ac837d-8c40-44b0-ae49-105cf7087668"/>
+        <COMPID name="utworzenie zamówienia" mc="Standard.UseCase" uid="b4e23a12-9111-4336-968e-3eff90c03743"/>
+        <COMPID name="ZAMÓWIENIA" mc="Standard.Actor" uid="59f89f0e-a049-44ad-8284-f67a7074bacf"/>
+        <COMPID name="Odebranie towaru" mc="Standard.UseCase" uid="7af5ca2b-21bc-4834-8b8d-6a952bd07759"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="DPU2 Use Case diagram" mc="Standard.UseCaseDiagram" uid="1d423391-aeee-4e28-9599-e07763aa1db7"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

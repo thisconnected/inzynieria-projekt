@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ZAMÓWIENIA" version="4">
+  <OBJECT>
+    <ID name="ZAMÓWIENIA" mc="Standard.Actor" uid="59f89f0e-a049-44ad-8284-f67a7074bacf"/>
+    <PID name="DPU2" mc="Standard.Package" uid="44c87033-fe0d-4477-a6ba-2111ba456ce4"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[ZAMÓWIENIA]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

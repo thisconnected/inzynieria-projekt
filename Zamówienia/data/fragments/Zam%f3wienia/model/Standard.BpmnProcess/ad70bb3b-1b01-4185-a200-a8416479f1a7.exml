@@ -151,6 +151,15 @@
                     <REFOBJ>
                       <ID name="" mc="Standard.BpmnEndEvent" uid="70d978fd-31e7-4a39-bfd8-f88b332833dc"/>
                     </REFOBJ>
+                    <REFOBJ>
+                      <ID name="Event Based Gateway" mc="Standard.BpmnEventBasedGateway" uid="d15b8a4b-bc7f-4b40-8398-520e5f66542d"/>
+                    </REFOBJ>
+                    <REFOBJ>
+                      <ID name="Message" mc="Standard.BpmnIntermediateCatchEvent" uid="bb8f22de-6792-4618-a0a3-f9358d385807"/>
+                    </REFOBJ>
+                    <REFOBJ>
+                      <ID name="Timer" mc="Standard.BpmnIntermediateCatchEvent" uid="250f8de0-a86e-4bdd-ae4f-f146ad87c653"/>
+                    </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -1699,16 +1708,7 @@ czytanie z bazy -&gt; po kazdym rekordzie zapytanie czy jest produkt</p>
             <ATT name="Name"><![CDATA[Płatność]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="BoundaryEventRef">
-              <REFOBJ>
-                <ID name="Potwierdzenie" mc="Standard.BpmnBoundaryEvent" uid="1186ecca-2d4d-4d53-acc6-83392d4863d6"/>
-              </REFOBJ>
-              <REFOBJ>
-                <ID name="Timer?" mc="Standard.BpmnBoundaryEvent" uid="ee240ae5-f07e-419e-a09b-93e382a1308e"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
+          <DEPENDENCIES></DEPENDENCIES>
         </OBJECT>
         <OBJECT>
           <ID name="f21" mc="Standard.BpmnSequenceFlow" uid="9a1d6583-fdf1-4763-af66-20497e35bf01"/>
@@ -1903,97 +1903,6 @@ czytanie z bazy -&gt; po kazdym rekordzie zapytanie czy jest produkt</p>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Potwierdzenie" mc="Standard.BpmnBoundaryEvent" uid="1186ecca-2d4d-4d53-acc6-83392d4863d6"/>
-          <ATTRIBUTES>
-            <ATT name="CancelActivity">true</ATT>
-            <ATT name="ParallelMultiple">false</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[Potwierdzenie]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="EventDefinitions">
-              <OBJECT>
-                <ID name="" mc="Standard.BpmnMessageEventDefinition" uid="f34fc8ac-b150-49fe-b746-473876cdde62"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="Timer?" mc="Standard.BpmnBoundaryEvent" uid="ee240ae5-f07e-419e-a09b-93e382a1308e"/>
-          <ATTRIBUTES>
-            <ATT name="CancelActivity">true</ATT>
-            <ATT name="ParallelMultiple">false</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[Timer?]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="EventDefinitions">
-              <OBJECT>
-                <ID name="" mc="Standard.BpmnTimerEventDefinition" uid="d7bad789-2c2d-4eac-a218-5509a9a0cc50"/>
-                <ATTRIBUTES>
-                  <ATT name="TimeCycle"></ATT>
-                  <ATT name="TimeDate"></ATT>
-                  <ATT name="TimeDuration"></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="f22" mc="Standard.BpmnSequenceFlow" uid="d981d371-43d3-4b24-8b7a-e30aea5eca36"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f22]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="Potwierdzenie" mc="Standard.BpmnBoundaryEvent" uid="1186ecca-2d4d-4d53-acc6-83392d4863d6"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="Towar zamówiony" mc="Standard.BpmnIntermediateThrowEvent" uid="db1301af-4f96-465f-8b85-f9b7fee7650c"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="f33" mc="Standard.BpmnSequenceFlow" uid="602d21c0-1d87-4d95-bb5a-898c1f241597"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f33]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="Timer?" mc="Standard.BpmnBoundaryEvent" uid="ee240ae5-f07e-419e-a09b-93e382a1308e"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="Zmiana statusu zamówienia" mc="Standard.BpmnTask" uid="2c226cbc-7e72-4a2e-9b96-c8846bd27885"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
           <ID name="Towar otrzymany" mc="Standard.BpmnBoundaryEvent" uid="a96dbd56-718f-4075-822a-88f7f533557e"/>
           <ATTRIBUTES>
             <ATT name="CancelActivity">true</ATT>
@@ -2035,6 +1944,63 @@ czytanie z bazy -&gt; po kazdym rekordzie zapytanie czy jest produkt</p>
                 <ID name="Zmiana statusu zamówienia" mc="Standard.BpmnTask" uid="2c226cbc-7e72-4a2e-9b96-c8846bd27885"/>
               </REFOBJ>
             </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Event Based Gateway" mc="Standard.BpmnEventBasedGateway" uid="d15b8a4b-bc7f-4b40-8398-520e5f66542d"/>
+          <ATTRIBUTES>
+            <ATT name="Instanciate">false</ATT>
+            <ATT name="EventGatewayType">ExclusiveGateway</ATT>
+            <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[Event Based Gateway]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Message" mc="Standard.BpmnIntermediateCatchEvent" uid="bb8f22de-6792-4618-a0a3-f9358d385807"/>
+          <ATTRIBUTES>
+            <ATT name="ParallelMultiple">false</ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[Message]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="EventDefinitions">
+              <OBJECT>
+                <ID name="" mc="Standard.BpmnMessageEventDefinition" uid="1b1891f8-f763-4688-95eb-fb8c67486e22"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Timer" mc="Standard.BpmnIntermediateCatchEvent" uid="250f8de0-a86e-4bdd-ae4f-f146ad87c653"/>
+          <ATTRIBUTES>
+            <ATT name="ParallelMultiple">false</ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[Timer]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="EventDefinitions">
+              <OBJECT>
+                <ID name="" mc="Standard.BpmnTimerEventDefinition" uid="e4596402-15bb-4669-a3ec-781751c50c30"/>
+                <ATTRIBUTES>
+                  <ATT name="TimeCycle"></ATT>
+                  <ATT name="TimeDate"></ATT>
+                  <ATT name="TimeDuration"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>

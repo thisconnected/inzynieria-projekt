@@ -69,25 +69,6 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="4f7a7bfc-a7c7-4cf9-89bb-b275730c21bd"/>
-          <ATTRIBUTES>
-            <ATT name="Name"><![CDATA[Message Flow]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="Potwierdzenie" mc="Standard.BpmnIntermediateThrowEvent" uid="af75bb4c-f940-4f58-87bd-4e572460f6d9"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="Potwierdzenie" mc="Standard.BpmnBoundaryEvent" uid="1186ecca-2d4d-4d53-acc6-83392d4863d6"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
           <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="dc30a3b8-184c-4232-af5e-af710f9b0960"/>
           <ATTRIBUTES>
             <ATT name="Name"><![CDATA[Message Flow]]></ATT>
