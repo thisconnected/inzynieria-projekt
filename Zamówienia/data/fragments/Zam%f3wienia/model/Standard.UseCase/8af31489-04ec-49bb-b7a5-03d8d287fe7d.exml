@@ -15,14 +15,14 @@
     <DEPENDENCIES>
       <COMP relation="Used">
         <OBJECT>
-          <ID name="UseCaseDependency" mc="Standard.UseCaseDependency" uid="f4f36af8-c51c-4d70-8ebd-e2d9f3219642"/>
+          <ID name="UseCaseDependency" mc="Standard.UseCaseDependency" uid="886f0641-4072-468e-a783-b5731e40b92e"/>
           <ATTRIBUTES>
             <ATT name="Name"><![CDATA[UseCaseDependency]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="realizacja zamowienia" mc="Standard.UseCase" uid="3774fe80-3853-4071-a7ac-89fe65e0e29f"/>
+              <ID name="zapytanie do hurtowni" mc="Standard.UseCase" uid="f08be49f-725a-461b-bf01-a3f41592e06d"/>
             </LINK>
             <LINK relation="Extension">
               <FOREIGNID name="include" mc="Infrastructure.Stereotype" uid="00000000-0000-9c49-0000-000000000000"/>
