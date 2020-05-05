@@ -22,9 +22,9 @@
           <DEPENDENCIES>
             <COMP relation="Lane">
               <OBJECT>
-                <ID name="Kontakt z hurtownia" mc="Standard.BpmnLane" uid="0110f431-4ffa-42a2-bf0e-029b33a20f4b"/>
+                <ID name="Obsluga hurtowni" mc="Standard.BpmnLane" uid="0110f431-4ffa-42a2-bf0e-029b33a20f4b"/>
                 <ATTRIBUTES>
-                  <ATT name="Name"><![CDATA[Kontakt z hurtownia]]></ATT>
+                  <ATT name="Name"><![CDATA[Obsluga hurtowni]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
