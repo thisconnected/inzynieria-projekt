@@ -13,6 +13,16 @@
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Hurtownia" mc="Standard.Class" uid="c50eedd8-fe09-405c-b185-38cec2fa1a6b"/>
+        <COMPID name="Magazyn" mc="Standard.Class" uid="822a45ad-93c7-404a-a6eb-9c13459c6a7b"/>
+        <COMPID name="Oferta" mc="Standard.Class" uid="a4daded3-6ea5-4ce0-9c5c-60bacc834567"/>
+        <COMPID name="Zamowienie" mc="Standard.Class" uid="ccdb95b6-c30c-4f70-9962-75fd2cde70d6"/>
+        <COMPID name="Paczka" mc="Standard.Class" uid="c083d14f-2047-4fb1-92c6-8ae9c1486b9d"/>
+        <COMPID name="Obsluga_Hurtowni" mc="Standard.Class" uid="93b68a8b-4468-4a9d-996b-043452d7adb1"/>
+        <COMPID name="Kierownik" mc="Standard.Class" uid="f7578d06-f29b-465c-9813-3dfb4bb1a84f"/>
+        <COMPID name="Obsluga_Zamowienia" mc="Standard.Class" uid="7595cede-6988-4d78-81dd-61a8c2eda7a4"/>
+      </COMP>
       <COMP relation="Product">
         <COMPID name="diagram klas Class diagram" mc="Standard.ClassDiagram" uid="65c45ab8-1f76-4dce-a9e9-62c76bf3e0e6"/>
       </COMP>
