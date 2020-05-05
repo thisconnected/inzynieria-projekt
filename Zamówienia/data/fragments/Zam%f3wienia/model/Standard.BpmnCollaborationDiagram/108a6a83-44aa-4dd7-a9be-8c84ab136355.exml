@@ -59,12 +59,6 @@
           <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="c2365155-8336-4ead-b7a2-8cd969cee386"/>
         </REFOBJ>
         <REFOBJ>
-          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="ff45c6d8-6e9f-4e5c-a1e1-ac7c1d33994a"/>
-        </REFOBJ>
-        <REFOBJ>
-          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="17e5ebd8-a2cf-4649-92aa-1b519fd317cb"/>
-        </REFOBJ>
-        <REFOBJ>
           <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="988f9eda-076e-4c70-a975-32afbed9c4d7"/>
         </REFOBJ>
         <REFOBJ>

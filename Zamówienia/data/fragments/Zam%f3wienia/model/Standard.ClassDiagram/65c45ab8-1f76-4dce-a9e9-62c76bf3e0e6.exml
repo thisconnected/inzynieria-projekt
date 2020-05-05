@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="diagram klas Class diagram" version="4">
+  <OBJECT>
+    <ID name="diagram klas Class diagram" mc="Standard.ClassDiagram" uid="65c45ab8-1f76-4dce-a9e9-62c76bf3e0e6"/>
+    <PID name="diagram klas" mc="Standard.Package" uid="eaf1053f-e78f-4960-b8a9-adbd5cd01841"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">1</ATT>
+      <ATT name="UiData"><![CDATA[eJztU11PwjAU/SvN3ikoMDVBjGyGGKcQUBOfyN16wWrXkrYo+/d2DFQwLGiIvvjU9vaec7/ObZ3NU0FeUBuu5Kl3QGseOWu3evETJpZw5kwesdkUTz2lJzRVDAVXlHGYaEgpMm6VpsaC5c8UBaYorSneycqpmw4X77B4eySFJ6VH70FrXrvV12qK2mZEQupiCcjUzIZgwf3dg5jhMgk5E8KrtlvVFeALdGgzgd5aCYdlJZjc39BEaaQFdof8AjAJMGSrYBdzO8DxjlFuHMUSSXBuw/jS5bi45pfrAknqdL5RaLUoqax4jQIsMpfLRt+ucxN5yS15i0Ay0IwGAoxZjoX4zaTRhPi4cjA+8isNlmAFTvCk4h8mR348rmMN/fLWOzZ7JdWrjCBGsZHB0GouJ85YXVhLq1ACL2Wg0qky3LoZ/JwqeOSCacwZIm7y3i2PrYiIy2ezu3tnEmp4delEkKFe1129dHVWy8IKvKEiZ3Dbskb4O8vyPdTfqoyzLXIIuzQ6f7gYjDrnwVV30Lu7CfejkB0W7/PMPtTzSQuNfy38iRZue/19i2Dr1xtVBotf]]></ATT>
+      <ATT name="PreviewData"><![CDATA[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAIAAAAmdTLBAAAAGElEQVR4nGP4TxlgGNU/qn9U/6j+EaofAB8cJiE1IQRUAAAAAElFTkSuQmCC]]></ATT>
+      <ATT name="Name"><![CDATA[diagram klas Class diagram]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="d9101af4-ea92-4094-bc46-feaa8563db34"/>
+          <ATTRIBUTES>
+            <ATT name="Content"></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

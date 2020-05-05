@@ -202,44 +202,6 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="ff45c6d8-6e9f-4e5c-a1e1-ac7c1d33994a"/>
-          <ATTRIBUTES>
-            <ATT name="Name"><![CDATA[Message Flow]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="Akceptacja ceny" mc="Standard.BpmnIntermediateThrowEvent" uid="c413f2a9-c046-4d8a-a56e-63bb4e857799"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="Invoking process" mc="Standard.BpmnParticipant" uid="1cc41cbc-79a8-423d-87c5-c4d0e06e90b2"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="17e5ebd8-a2cf-4649-92aa-1b519fd317cb"/>
-          <ATTRIBUTES>
-            <ATT name="Name"><![CDATA[Message Flow]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="Invoking process" mc="Standard.BpmnParticipant" uid="1cc41cbc-79a8-423d-87c5-c4d0e06e90b2"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="otrzymanie decyzji" mc="Standard.BpmnIntermediateCatchEvent" uid="0b65cde1-359e-48e8-bbb1-594c3ead1950"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
           <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="988f9eda-076e-4c70-a975-32afbed9c4d7"/>
           <ATTRIBUTES>
             <ATT name="Name"><![CDATA[Message Flow]]></ATT>
