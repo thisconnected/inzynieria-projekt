@@ -1,4 +1,4 @@
-#Tue May 05 14:39:30 CEST 2020
-org.modelio.diagram.editor.OpenedDiagrams2='diagram klas Class diagram' {65c45ab8-1f76-4dce-a9e9-62c76bf3e0e6} Standard.ClassDiagram
-org.modelio.diagram.editor.OpenedDiagrams1='DPU2 Use Case diagram' {1d423391-aeee-4e28-9599-e07763aa1db7} Standard.UseCaseDiagram
-org.modelio.diagram.editor.OpenedDiagrams0='zapytanie od magazynu' {ee00daaa-ee15-4322-9d3a-7a75742a8569} Standard.BpmnProcessDesignDiagram
+#Tue May 12 14:37:16 CEST 2020
+org.modelio.diagram.editor.OpenedDiagrams2='zapytanie od magazynu' {ee00daaa-ee15-4322-9d3a-7a75742a8569} Standard.BpmnProcessDesignDiagram
+org.modelio.diagram.editor.OpenedDiagrams1='Interaction Sequence diagram' {522d2d87-632e-4e7f-bdad-1fe0a8495a5e} Standard.SequenceDiagram
+org.modelio.diagram.editor.OpenedDiagrams0='diagram klas Class diagram' {65c45ab8-1f76-4dce-a9e9-62c76bf3e0e6} Standard.ClassDiagram

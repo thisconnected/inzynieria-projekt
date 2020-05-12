@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="diagram sekwencji" version="4">
+  <OBJECT>
+    <ID name="diagram sekwencji" mc="Standard.Package" uid="b40be3c7-355f-448d-bf00-8ee59e66fbec"/>
+    <PID name="Zamówienia" mc="Standard.Project" uid="24e8c5e3-a104-48a2-a005-14fe84c6a458"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[diagram sekwencji]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="Interaction" mc="Standard.Interaction" uid="e027a22c-167c-4803-ac1f-91aeac80f540"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
