@@ -119,9 +119,6 @@
                       <ID name="Zmiana statusu zamówienia" mc="Standard.BpmnTask" uid="2c226cbc-7e72-4a2e-9b96-c8846bd27885"/>
                     </REFOBJ>
                     <REFOBJ>
-                      <ID name="Płatność" mc="Standard.BpmnTask" uid="67817b6c-b06a-48f7-835b-9c93656ee9ac"/>
-                    </REFOBJ>
-                    <REFOBJ>
                       <ID name="" mc="Standard.BpmnEventBasedGateway" uid="d15b8a4b-bc7f-4b40-8398-520e5f66542d"/>
                     </REFOBJ>
                     <REFOBJ>
@@ -153,6 +150,9 @@
                     </REFOBJ>
                     <REFOBJ>
                       <ID name="wyslij ponownie" mc="Standard.BpmnIntermediateThrowEvent" uid="e66b6a0f-2766-4b44-ab58-920a031dc58b"/>
+                    </REFOBJ>
+                    <REFOBJ>
+                      <ID name="Platnosc" mc="Standard.BpmnAdHocSubProcess" uid="3f2f749a-5b49-4c17-ae4a-b6c961143ffe"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -702,6 +702,23 @@
                 <ID name="f14" mc="Standard.BpmnSequenceFlow" uid="26c2eeb1-1b06-48ea-81cf-5993838c99d6"/>
               </REFOBJ>
             </LINK>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="Note" mc="Infrastructure.Note" uid="47266e66-193f-4f30-acb9-b58088995df4"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[<p>Tutaj jak usuniemy ta zlozona bramke to nie wiem jak synchronizacja bedzie dzialac tych X instancji ktore ceny wysyłaja</p><p>2020-05-13</p><p><del>Mysle ze to w sam podproces z &quot;cancel remaining&quot;</del></p><p>2020-05-17</p>
+]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/html]]></ATT>
+                  <ATT name="Name"><![CDATA[Note]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
@@ -1475,41 +1492,6 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Płatność" mc="Standard.BpmnTask" uid="67817b6c-b06a-48f7-835b-9c93656ee9ac"/>
-          <ATTRIBUTES>
-            <ATT name="IsGlobal">false</ATT>
-            <ATT name="IsForCompensation">false</ATT>
-            <ATT name="StartQuantity">1</ATT>
-            <ATT name="CompletionQuantity">1</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[Płatność]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES></DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="f21" mc="Standard.BpmnSequenceFlow" uid="9a1d6583-fdf1-4763-af66-20497e35bf01"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f21]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="Wysłanie platnosci" mc="Standard.BpmnIntermediateThrowEvent" uid="ee181703-3207-44bd-91af-8507f3643d59"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="Płatność" mc="Standard.BpmnTask" uid="67817b6c-b06a-48f7-835b-9c93656ee9ac"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
           <ID name="f16" mc="Standard.BpmnSequenceFlow" uid="9445715f-5d1c-4deb-bead-29a542d8897e"/>
           <ATTRIBUTES>
             <ATT name="IsImmediate">false</ATT>
@@ -1586,28 +1568,6 @@
                 <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
             </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="f22" mc="Standard.BpmnSequenceFlow" uid="797c401d-f44d-49c5-8d46-8add8e113456"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f22]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="Płatność" mc="Standard.BpmnTask" uid="67817b6c-b06a-48f7-835b-9c93656ee9ac"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnEventBasedGateway" uid="d15b8a4b-bc7f-4b40-8398-520e5f66542d"/>
-              </REFOBJ>
-            </LINK>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
@@ -2167,6 +2127,69 @@
             <LINK relation="TargetRef">
               <REFOBJ>
                 <ID name="" mc="Standard.BpmnExclusiveGateway" uid="03099e58-be8f-4130-814c-9a0dc08d89bd"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Platnosc" mc="Standard.BpmnAdHocSubProcess" uid="3f2f749a-5b49-4c17-ae4a-b6c961143ffe"/>
+          <ATTRIBUTES>
+            <ATT name="Ordering">ParallelOrdering</ATT>
+            <ATT name="CancelRemainingInstances">true</ATT>
+            <ATT name="CompletionCondition"></ATT>
+            <ATT name="IsForCompensation">false</ATT>
+            <ATT name="StartQuantity">1</ATT>
+            <ATT name="CompletionQuantity">1</ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[Platnosc]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Product">
+              <COMPID name="Ad-hoc Sub-Process" mc="Standard.BpmnSubProcessDiagram" uid="87fffcc2-c2ec-4946-b487-921e65b3a2d1"/>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="f21" mc="Standard.BpmnSequenceFlow" uid="0fcebbf8-9bfa-4c71-a90b-51d89466f7ac"/>
+          <ATTRIBUTES>
+            <ATT name="IsImmediate">false</ATT>
+            <ATT name="ConditionExpression"></ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[f21]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="Wysłanie platnosci" mc="Standard.BpmnIntermediateThrowEvent" uid="ee181703-3207-44bd-91af-8507f3643d59"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="Platnosc" mc="Standard.BpmnAdHocSubProcess" uid="3f2f749a-5b49-4c17-ae4a-b6c961143ffe"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="f22" mc="Standard.BpmnSequenceFlow" uid="5ec82e2b-437e-4496-bfd8-ce5993a1e7b4"/>
+          <ATTRIBUTES>
+            <ATT name="IsImmediate">false</ATT>
+            <ATT name="ConditionExpression"></ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[f22]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="Platnosc" mc="Standard.BpmnAdHocSubProcess" uid="3f2f749a-5b49-4c17-ae4a-b6c961143ffe"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="" mc="Standard.BpmnEventBasedGateway" uid="d15b8a4b-bc7f-4b40-8398-520e5f66542d"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
