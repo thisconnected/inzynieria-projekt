@@ -469,13 +469,13 @@
           <DEPENDENCIES>
             <COMP relation="SentMessage">
               <OBJECT>
-                <ID name="zamow(nazwaTowaru)" mc="Standard.Message" uid="a5c8b117-b3af-420a-95e7-0f3924384b8c"/>
+                <ID name="zamow(oferta)" mc="Standard.Message" uid="a5c8b117-b3af-420a-95e7-0f3924384b8c"/>
                 <ATTRIBUTES>
                   <ATT name="Argument"></ATT>
                   <ATT name="KindOfMessage">CompleteKind</ATT>
                   <ATT name="SortOfMessage">SyncCall</ATT>
                   <ATT name="Sequence"><![CDATA[4]]></ATT>
-                  <ATT name="Name"><![CDATA[zamow(nazwaTowaru)]]></ATT>
+                  <ATT name="Name"><![CDATA[zamow(oferta)]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>

@@ -178,9 +178,25 @@
                       <ID name="" mc="Standard.BpmnExclusiveGateway" uid="03099e58-be8f-4130-814c-9a0dc08d89bd"/>
                     </REFOBJ>
                     <REFOBJ>
-                      <ID name="Message" mc="Standard.BpmnEndEvent" uid="97966832-ebd6-4df2-84e5-b0e5a652a523"/>
+                      <ID name="Odmowa" mc="Standard.BpmnEndEvent" uid="97966832-ebd6-4df2-84e5-b0e5a652a523"/>
                     </REFOBJ>
                   </LINK>
+                  <COMP relation="Descriptor">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.Note" uid="9085f6bc-7f53-4d84-b287-4044233795e6"/>
+                      <ATTRIBUTES>
+                        <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+                        <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Model">
+                          <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
@@ -504,7 +520,7 @@
               <OBJECT>
                 <ID name="Note" mc="Infrastructure.Note" uid="b2bf5ba6-3e16-4ab9-989a-669d572b700a"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[<p>Czy da sie zrobic to bardziej elegancko niz miec linie kontrolną od kt&oacute;rej zależnie dane przechodzą dalej</p><p>&nbsp;</p>
+                  <ATT name="Content"><![CDATA[<p>Nadal zastanawiam sie o rozwiazaniu tego przeplywu kontrolnego</p><p>2020-05-13</p><p>&nbsp;</p>
 ]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/html]]></ATT>
                   <ATT name="Name"><![CDATA[Note]]></ATT>
@@ -686,23 +702,6 @@
                 <ID name="f14" mc="Standard.BpmnSequenceFlow" uid="26c2eeb1-1b06-48ea-81cf-5993838c99d6"/>
               </REFOBJ>
             </LINK>
-            <COMP relation="Descriptor">
-              <OBJECT>
-                <ID name="Note" mc="Infrastructure.Note" uid="d1d37185-6b69-4858-8575-3daa62453073"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[<p>Czy jakoś inaczej mozna wybrac najnizsza cene, a w przypadku braku zakonczyc?</p><p>&nbsp;</p>
-]]></ATT>
-                  <ATT name="MimeType"><![CDATA[text/html]]></ATT>
-                  <ATT name="Name"><![CDATA[Note]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
@@ -918,24 +917,6 @@
             </COMP>
             <COMP relation="Product">
               <COMPID name="Sub-Process" mc="Standard.BpmnSubProcessDiagram" uid="ba264145-53bd-4d1c-ab8e-a5b6f6f2ce19"/>
-            </COMP>
-            <COMP relation="Descriptor">
-              <OBJECT>
-                <ID name="Note" mc="Infrastructure.Note" uid="9bb7604f-ccca-4cf3-9648-27c0dac8642f"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[<p>Tutaj niewiemy czy tak wystarczy do wielu instancji rownoległych<br />
-czytanie z bazy -&gt; po kazdym rekordzie zapytanie czy jest produkt</p>
-]]></ATT>
-                  <ATT name="MimeType"><![CDATA[text/html]]></ATT>
-                  <ATT name="Name"><![CDATA[Note]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -2127,10 +2108,10 @@ czytanie z bazy -&gt; po kazdym rekordzie zapytanie czy jest produkt</p>
           <DEPENDENCIES></DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Message" mc="Standard.BpmnEndEvent" uid="97966832-ebd6-4df2-84e5-b0e5a652a523"/>
+          <ID name="Odmowa" mc="Standard.BpmnEndEvent" uid="97966832-ebd6-4df2-84e5-b0e5a652a523"/>
           <ATTRIBUTES>
             <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[Message]]></ATT>
+            <ATT name="Name"><![CDATA[Odmowa]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -2150,7 +2131,7 @@ czytanie z bazy -&gt; po kazdym rekordzie zapytanie czy jest produkt</p>
           <ID name="f34" mc="Standard.BpmnSequenceFlow" uid="a12c5164-9b2e-460f-8a9d-dac82c2fe951"/>
           <ATTRIBUTES>
             <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"></ATT>
+            <ATT name="ConditionExpression"><![CDATA[Rezygnacja]]></ATT>
             <ATT name="TriggeredByEvent">false</ATT>
             <ATT name="Name"><![CDATA[f34]]></ATT>
             <ATT name="status">1970354901745664</ATT>
@@ -2163,7 +2144,7 @@ czytanie z bazy -&gt; po kazdym rekordzie zapytanie czy jest produkt</p>
             </LINK>
             <LINK relation="TargetRef">
               <REFOBJ>
-                <ID name="Message" mc="Standard.BpmnEndEvent" uid="97966832-ebd6-4df2-84e5-b0e5a652a523"/>
+                <ID name="Odmowa" mc="Standard.BpmnEndEvent" uid="97966832-ebd6-4df2-84e5-b0e5a652a523"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
