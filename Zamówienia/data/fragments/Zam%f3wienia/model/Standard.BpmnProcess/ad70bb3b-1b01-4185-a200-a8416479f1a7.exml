@@ -30,34 +30,16 @@
                 <DEPENDENCIES>
                   <LINK relation="FlowElementRef">
                     <REFOBJ>
-                      <ID name="analiza zapytania" mc="Standard.BpmnTask" uid="3c248a55-4ba6-46f5-ae5a-6437c51e0fd8"/>
-                    </REFOBJ>
-                    <REFOBJ>
                       <ID name="zapotrzebowanie o produkt" mc="Standard.BpmnStartEvent" uid="a09fe1db-11c8-4636-a768-7889aeb5f542"/>
                     </REFOBJ>
                     <REFOBJ>
                       <ID name="zabijanie dzieci (instancji)" mc="Standard.BpmnEndEvent" uid="46f8d902-6acc-4be7-9b7b-c889c1ccc5e1"/>
                     </REFOBJ>
                     <REFOBJ>
-                      <ID name="" mc="Standard.BpmnParallelGateway" uid="2308309c-b7ee-4c6c-a258-a742592d6766"/>
-                    </REFOBJ>
-                    <REFOBJ>
-                      <ID name="" mc="Standard.BpmnExclusiveGateway" uid="aa282fe8-d345-4b0e-bd55-9ba88503dc76"/>
-                    </REFOBJ>
-                    <REFOBJ>
                       <ID name="odczytanie listy hurtowni" mc="Standard.BpmnTask" uid="bf18c7b2-1582-4584-82d0-2c40e9e2dc92"/>
                     </REFOBJ>
                     <REFOBJ>
                       <ID name="" mc="Standard.BpmnExclusiveGateway" uid="f98323ae-2b01-4f34-add6-5a269df51aab"/>
-                    </REFOBJ>
-                    <REFOBJ>
-                      <ID name="" mc="Standard.BpmnParallelGateway" uid="bf9cc564-e996-4803-b4ed-46fbbf974cf2"/>
-                    </REFOBJ>
-                    <REFOBJ>
-                      <ID name="" mc="Standard.BpmnParallelGateway" uid="d1bc4c71-64f1-4e1e-b533-60408a3bf7c8"/>
-                    </REFOBJ>
-                    <REFOBJ>
-                      <ID name="" mc="Standard.BpmnParallelGateway" uid="b272e9a2-df6b-44a1-b0c3-dcde43b073e3"/>
                     </REFOBJ>
                     <REFOBJ>
                       <ID name="Cena towaru" mc="Standard.BpmnEndEvent" uid="0b1ee38f-3d24-4fc6-afa1-59f7b15fee04"/>
@@ -72,13 +54,13 @@
                       <ID name="Analiza wiadomości" mc="Standard.BpmnTask" uid="98bab7a3-d088-482d-bfe5-204987d8e985"/>
                     </REFOBJ>
                     <REFOBJ>
-                      <ID name="" mc="Standard.BpmnParallelGateway" uid="61edbf4c-dc81-4767-8a75-2694258cf417"/>
-                    </REFOBJ>
-                    <REFOBJ>
                       <ID name="Nie ma towaru" mc="Standard.BpmnEndEvent" uid="c240c937-ebd6-40b5-ba01-2c302f52a8fa"/>
                     </REFOBJ>
                     <REFOBJ>
                       <ID name="Lista hurtowni" mc="Standard.BpmnDataStore" uid="805008d5-f0a9-4c76-abed-a5096e19f89c"/>
+                    </REFOBJ>
+                    <REFOBJ>
+                      <ID name="" mc="Standard.BpmnExclusiveGateway" uid="01a32e56-f712-4a53-a00a-4c21a1d2b207"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -154,25 +136,8 @@
                     <REFOBJ>
                       <ID name="Platnosc" mc="Standard.BpmnAdHocSubProcess" uid="3f2f749a-5b49-4c17-ae4a-b6c961143ffe"/>
                     </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Kierownik" mc="Standard.BpmnLane" uid="2e7707a4-129e-4030-853f-41c2081aa5b4"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"><![CDATA[Kierownik]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="FlowElementRef">
                     <REFOBJ>
-                      <ID name="Wybor ceny" mc="Standard.BpmnTask" uid="c4fc06e2-12fd-4a83-be53-fb36283bcd71"/>
-                    </REFOBJ>
-                    <REFOBJ>
-                      <ID name="Decyzja o zaniechaniu" mc="Standard.BpmnTask" uid="0d5a63b3-9c49-4628-8c59-9084708fcc27"/>
-                    </REFOBJ>
-                    <REFOBJ>
-                      <ID name="" mc="Standard.BpmnExclusiveGateway" uid="6c5ab759-3015-4589-8d63-da206ed34e91"/>
+                      <ID name="Wybor dostawcy" mc="Standard.BpmnTask" uid="c4fc06e2-12fd-4a83-be53-fb36283bcd71"/>
                     </REFOBJ>
                     <REFOBJ>
                       <ID name="" mc="Standard.BpmnExclusiveGateway" uid="03099e58-be8f-4130-814c-9a0dc08d89bd"/>
@@ -180,23 +145,13 @@
                     <REFOBJ>
                       <ID name="Odmowa" mc="Standard.BpmnEndEvent" uid="97966832-ebd6-4df2-84e5-b0e5a652a523"/>
                     </REFOBJ>
+                    <REFOBJ>
+                      <ID name="Decyzja o zaniechaniu" mc="Standard.BpmnTask" uid="0d5a63b3-9c49-4628-8c59-9084708fcc27"/>
+                    </REFOBJ>
+                    <REFOBJ>
+                      <ID name="" mc="Standard.BpmnExclusiveGateway" uid="6c5ab759-3015-4589-8d63-da206ed34e91"/>
+                    </REFOBJ>
                   </LINK>
-                  <COMP relation="Descriptor">
-                    <OBJECT>
-                      <ID name="" mc="Infrastructure.Note" uid="9085f6bc-7f53-4d84-b287-4044233795e6"/>
-                      <ATTRIBUTES>
-                        <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
-                        <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <LINK relation="Model">
-                          <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
@@ -204,19 +159,6 @@
         </OBJECT>
       </COMP>
       <COMP relation="FlowElement">
-        <OBJECT>
-          <ID name="analiza zapytania" mc="Standard.BpmnTask" uid="3c248a55-4ba6-46f5-ae5a-6437c51e0fd8"/>
-          <ATTRIBUTES>
-            <ATT name="IsGlobal">false</ATT>
-            <ATT name="IsForCompensation">false</ATT>
-            <ATT name="StartQuantity">1</ATT>
-            <ATT name="CompletionQuantity">1</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[analiza zapytania]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES></DEPENDENCIES>
-        </OBJECT>
         <OBJECT>
           <ID name="zapotrzebowanie o produkt" mc="Standard.BpmnStartEvent" uid="a09fe1db-11c8-4636-a768-7889aeb5f542"/>
           <ATTRIBUTES>
@@ -240,28 +182,6 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="f" mc="Standard.BpmnSequenceFlow" uid="a8696938-f75f-4613-aa0f-fd564a5eb3e5"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="zapotrzebowanie o produkt" mc="Standard.BpmnStartEvent" uid="a09fe1db-11c8-4636-a768-7889aeb5f542"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="analiza zapytania" mc="Standard.BpmnTask" uid="3c248a55-4ba6-46f5-ae5a-6437c51e0fd8"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
           <ID name="zabijanie dzieci (instancji)" mc="Standard.BpmnEndEvent" uid="46f8d902-6acc-4be7-9b7b-c889c1ccc5e1"/>
           <ATTRIBUTES>
             <ATT name="TriggeredByEvent">false</ATT>
@@ -269,70 +189,6 @@
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES></DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="" mc="Standard.BpmnParallelGateway" uid="2308309c-b7ee-4c6c-a258-a742592d6766"/>
-          <ATTRIBUTES>
-            <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES></DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="" mc="Standard.BpmnExclusiveGateway" uid="aa282fe8-d345-4b0e-bd55-9ba88503dc76"/>
-          <ATTRIBUTES>
-            <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES></DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="f1" mc="Standard.BpmnSequenceFlow" uid="f9eb4b95-1700-443d-8080-056289dace6d"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f1]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="analiza zapytania" mc="Standard.BpmnTask" uid="3c248a55-4ba6-46f5-ae5a-6437c51e0fd8"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnExclusiveGateway" uid="aa282fe8-d345-4b0e-bd55-9ba88503dc76"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="f2" mc="Standard.BpmnSequenceFlow" uid="a8489b64-e6d6-4a1f-8525-b12ca35a3eab"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"><![CDATA[sprawdź]]></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f2]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnExclusiveGateway" uid="aa282fe8-d345-4b0e-bd55-9ba88503dc76"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnParallelGateway" uid="2308309c-b7ee-4c6c-a258-a742592d6766"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
           <ID name="odczytanie listy hurtowni" mc="Standard.BpmnTask" uid="bf18c7b2-1582-4584-82d0-2c40e9e2dc92"/>
@@ -368,28 +224,6 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="f4" mc="Standard.BpmnSequenceFlow" uid="29a4755d-726c-4d14-a245-4b128f0fc1cb"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f4]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnParallelGateway" uid="2308309c-b7ee-4c6c-a258-a742592d6766"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="odczytanie listy hurtowni" mc="Standard.BpmnTask" uid="bf18c7b2-1582-4584-82d0-2c40e9e2dc92"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
           <ID name="" mc="Standard.BpmnExclusiveGateway" uid="f98323ae-2b01-4f34-add6-5a269df51aab"/>
           <ATTRIBUTES>
             <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
@@ -417,142 +251,6 @@
             <LINK relation="TargetRef">
               <REFOBJ>
                 <ID name="zabijanie dzieci (instancji)" mc="Standard.BpmnEndEvent" uid="46f8d902-6acc-4be7-9b7b-c889c1ccc5e1"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="" mc="Standard.BpmnParallelGateway" uid="bf9cc564-e996-4803-b4ed-46fbbf974cf2"/>
-          <ATTRIBUTES>
-            <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES></DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="f5" mc="Standard.BpmnSequenceFlow" uid="f3cb2fc1-efb1-4bf2-a416-c355c04b4163"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f5]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnParallelGateway" uid="2308309c-b7ee-4c6c-a258-a742592d6766"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnParallelGateway" uid="bf9cc564-e996-4803-b4ed-46fbbf974cf2"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="" mc="Standard.BpmnParallelGateway" uid="d1bc4c71-64f1-4e1e-b533-60408a3bf7c8"/>
-          <ATTRIBUTES>
-            <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES></DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="f3" mc="Standard.BpmnSequenceFlow" uid="8a93dddf-b8c2-47e4-b39d-092ac22b733d"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"><![CDATA[Kup]]></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f3]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnExclusiveGateway" uid="aa282fe8-d345-4b0e-bd55-9ba88503dc76"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnParallelGateway" uid="d1bc4c71-64f1-4e1e-b533-60408a3bf7c8"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="f12" mc="Standard.BpmnSequenceFlow" uid="ed82f215-4f5f-49e0-a1ce-b93b79ef47fb"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f12]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnParallelGateway" uid="d1bc4c71-64f1-4e1e-b533-60408a3bf7c8"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="odczytanie listy hurtowni" mc="Standard.BpmnTask" uid="bf18c7b2-1582-4584-82d0-2c40e9e2dc92"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="" mc="Standard.BpmnParallelGateway" uid="b272e9a2-df6b-44a1-b0c3-dcde43b073e3"/>
-          <ATTRIBUTES>
-            <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="Descriptor">
-              <OBJECT>
-                <ID name="Note" mc="Infrastructure.Note" uid="b2bf5ba6-3e16-4ab9-989a-669d572b700a"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[<p>Nadal zastanawiam sie o rozwiazaniu tego przeplywu kontrolnego</p><p>2020-05-13</p><p>&nbsp;</p>
-]]></ATT>
-                  <ATT name="MimeType"><![CDATA[text/html]]></ATT>
-                  <ATT name="Name"><![CDATA[Note]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="f13" mc="Standard.BpmnSequenceFlow" uid="964722c3-ab06-4512-a055-7b5449c76e45"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f13]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnParallelGateway" uid="d1bc4c71-64f1-4e1e-b533-60408a3bf7c8"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnParallelGateway" uid="b272e9a2-df6b-44a1-b0c3-dcde43b073e3"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
@@ -697,11 +395,6 @@
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
-            <LINK relation="DefaultFlow">
-              <REFOBJ>
-                <ID name="f14" mc="Standard.BpmnSequenceFlow" uid="26c2eeb1-1b06-48ea-81cf-5993838c99d6"/>
-              </REFOBJ>
-            </LINK>
             <COMP relation="Descriptor">
               <OBJECT>
                 <ID name="Note" mc="Infrastructure.Note" uid="47266e66-193f-4f30-acb9-b58088995df4"/>
@@ -1012,60 +705,6 @@
             <LINK relation="TargetRef">
               <REFOBJ>
                 <ID name="" mc="Standard.BpmnExclusiveGateway" uid="f98323ae-2b01-4f34-add6-5a269df51aab"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="" mc="Standard.BpmnParallelGateway" uid="61edbf4c-dc81-4767-8a75-2694258cf417"/>
-          <ATTRIBUTES>
-            <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES></DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="f15" mc="Standard.BpmnSequenceFlow" uid="ae9a4492-8ccd-43bc-8ec6-d625481f6ecd"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f15]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnParallelGateway" uid="61edbf4c-dc81-4767-8a75-2694258cf417"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnParallelGateway" uid="bf9cc564-e996-4803-b4ed-46fbbf974cf2"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="f19" mc="Standard.BpmnSequenceFlow" uid="f5938e8a-8f60-420d-b22e-eb40e1076ee6"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f19]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnParallelGateway" uid="61edbf4c-dc81-4767-8a75-2694258cf417"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnParallelGateway" uid="b272e9a2-df6b-44a1-b0c3-dcde43b073e3"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
@@ -1470,28 +1109,6 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="f7" mc="Standard.BpmnSequenceFlow" uid="d9041600-15f3-406b-a380-321b9fce984c"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f7]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnParallelGateway" uid="bf9cc564-e996-4803-b4ed-46fbbf974cf2"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="Cena towaru" mc="Standard.BpmnEndEvent" uid="0b1ee38f-3d24-4fc6-afa1-59f7b15fee04"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
           <ID name="f16" mc="Standard.BpmnSequenceFlow" uid="9445715f-5d1c-4deb-bead-29a542d8897e"/>
           <ATTRIBUTES>
             <ATT name="IsImmediate">false</ATT>
@@ -1632,63 +1249,6 @@
             <LINK relation="TargetRef">
               <REFOBJ>
                 <ID name="Towar zamówiony" mc="Standard.BpmnIntermediateThrowEvent" uid="db1301af-4f96-465f-8b85-f9b7fee7650c"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="f14" mc="Standard.BpmnSequenceFlow" uid="26c2eeb1-1b06-48ea-81cf-5993838c99d6"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f14]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnComplexGateway" uid="5b94af24-3a59-418f-8166-47efc2592bfb"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnParallelGateway" uid="61edbf4c-dc81-4767-8a75-2694258cf417"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="Wybor ceny" mc="Standard.BpmnTask" uid="c4fc06e2-12fd-4a83-be53-fb36283bcd71"/>
-          <ATTRIBUTES>
-            <ATT name="IsGlobal">false</ATT>
-            <ATT name="IsForCompensation">false</ATT>
-            <ATT name="StartQuantity">1</ATT>
-            <ATT name="CompletionQuantity">1</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[Wybor ceny]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES></DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="f35" mc="Standard.BpmnSequenceFlow" uid="b651296e-8c57-4744-b8e3-4b1614424e06"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f35]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnParallelGateway" uid="b272e9a2-df6b-44a1-b0c3-dcde43b073e3"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="Wybor ceny" mc="Standard.BpmnTask" uid="c4fc06e2-12fd-4a83-be53-fb36283bcd71"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
@@ -1967,35 +1527,6 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Decyzja o zaniechaniu" mc="Standard.BpmnTask" uid="0d5a63b3-9c49-4628-8c59-9084708fcc27"/>
-          <ATTRIBUTES>
-            <ATT name="IsGlobal">false</ATT>
-            <ATT name="IsForCompensation">false</ATT>
-            <ATT name="StartQuantity">1</ATT>
-            <ATT name="CompletionQuantity">1</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[Decyzja o zaniechaniu]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES></DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="" mc="Standard.BpmnExclusiveGateway" uid="6c5ab759-3015-4589-8d63-da206ed34e91"/>
-          <ATTRIBUTES>
-            <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="DefaultFlow">
-              <REFOBJ>
-                <ID name="f39" mc="Standard.BpmnSequenceFlow" uid="7708f9c5-f064-4037-9b36-2ee906178aef"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
           <ID name="Wycofanie zamówienia z hurtowni" mc="Standard.BpmnIntermediateThrowEvent" uid="8b28b490-757e-461c-b9e3-3ebca6da279b"/>
           <ATTRIBUTES>
             <ATT name="TriggeredByEvent">false</ATT>
@@ -2058,36 +1589,6 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="" mc="Standard.BpmnExclusiveGateway" uid="03099e58-be8f-4130-814c-9a0dc08d89bd"/>
-          <ATTRIBUTES>
-            <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES></DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="Odmowa" mc="Standard.BpmnEndEvent" uid="97966832-ebd6-4df2-84e5-b0e5a652a523"/>
-          <ATTRIBUTES>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[Odmowa]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="EventDefinitions">
-              <OBJECT>
-                <ID name="" mc="Standard.BpmnMessageEventDefinition" uid="2e406b07-1048-4f39-a48d-0d6e61a5be85"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
           <ID name="f34" mc="Standard.BpmnSequenceFlow" uid="a12c5164-9b2e-460f-8a9d-dac82c2fe951"/>
           <ATTRIBUTES>
             <ATT name="IsImmediate">false</ATT>
@@ -2121,7 +1622,7 @@
           <DEPENDENCIES>
             <LINK relation="SourceRef">
               <REFOBJ>
-                <ID name="Wybor ceny" mc="Standard.BpmnTask" uid="c4fc06e2-12fd-4a83-be53-fb36283bcd71"/>
+                <ID name="Wybor dostawcy" mc="Standard.BpmnTask" uid="c4fc06e2-12fd-4a83-be53-fb36283bcd71"/>
               </REFOBJ>
             </LINK>
             <LINK relation="TargetRef">
@@ -2190,6 +1691,224 @@
             <LINK relation="TargetRef">
               <REFOBJ>
                 <ID name="" mc="Standard.BpmnEventBasedGateway" uid="d15b8a4b-bc7f-4b40-8398-520e5f66542d"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="Standard.BpmnExclusiveGateway" uid="01a32e56-f712-4a53-a00a-4c21a1d2b207"/>
+          <ATTRIBUTES>
+            <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="dda8f7f2-7285-4025-a895-64c2d606cee2"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[Informacja do magazynu o dostępności lub zakup towaru w zależności wstępnych magazynu]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="comment" mc="Infrastructure.NoteType" uid="00000000-0000-3e80-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Note" mc="Infrastructure.Note" uid="b2c0a7e4-2a12-464e-a011-c8bd130080b0"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[Informacja do magazynu o dostępności lub zakup towaru w zależności od oczekiwań magazynu]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"><![CDATA[Note]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="f15" mc="Standard.BpmnSequenceFlow" uid="f980c84a-0b01-4d9d-a7e8-d01263aec7b3"/>
+          <ATTRIBUTES>
+            <ATT name="IsImmediate">false</ATT>
+            <ATT name="ConditionExpression"></ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[f15]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="" mc="Standard.BpmnComplexGateway" uid="5b94af24-3a59-418f-8166-47efc2592bfb"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="" mc="Standard.BpmnExclusiveGateway" uid="01a32e56-f712-4a53-a00a-4c21a1d2b207"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="f2" mc="Standard.BpmnSequenceFlow" uid="f832b599-55e8-4f37-816f-9560f06b4b78"/>
+          <ATTRIBUTES>
+            <ATT name="IsImmediate">false</ATT>
+            <ATT name="ConditionExpression"><![CDATA[Informacja o dostepnosci]]></ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[f2]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="" mc="Standard.BpmnExclusiveGateway" uid="01a32e56-f712-4a53-a00a-4c21a1d2b207"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="Cena towaru" mc="Standard.BpmnEndEvent" uid="0b1ee38f-3d24-4fc6-afa1-59f7b15fee04"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="f3" mc="Standard.BpmnSequenceFlow" uid="b01a3cb7-eaba-4d8d-84ff-530ea9b37aa4"/>
+          <ATTRIBUTES>
+            <ATT name="IsImmediate">false</ATT>
+            <ATT name="ConditionExpression"><![CDATA[Zakup]]></ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[f3]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="" mc="Standard.BpmnExclusiveGateway" uid="01a32e56-f712-4a53-a00a-4c21a1d2b207"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="Wybor dostawcy" mc="Standard.BpmnTask" uid="c4fc06e2-12fd-4a83-be53-fb36283bcd71"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="f" mc="Standard.BpmnSequenceFlow" uid="4379cf3b-fb73-4bb3-aaf0-10d442f1c28e"/>
+          <ATTRIBUTES>
+            <ATT name="IsImmediate">false</ATT>
+            <ATT name="ConditionExpression"></ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[f]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="zapotrzebowanie o produkt" mc="Standard.BpmnStartEvent" uid="a09fe1db-11c8-4636-a768-7889aeb5f542"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="odczytanie listy hurtowni" mc="Standard.BpmnTask" uid="bf18c7b2-1582-4584-82d0-2c40e9e2dc92"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Wybor dostawcy" mc="Standard.BpmnTask" uid="c4fc06e2-12fd-4a83-be53-fb36283bcd71"/>
+          <ATTRIBUTES>
+            <ATT name="IsGlobal">false</ATT>
+            <ATT name="IsForCompensation">false</ATT>
+            <ATT name="StartQuantity">1</ATT>
+            <ATT name="CompletionQuantity">1</ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[Wybor dostawcy]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="04d76daf-504c-4340-9b55-338ae8735198"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="Standard.BpmnExclusiveGateway" uid="03099e58-be8f-4130-814c-9a0dc08d89bd"/>
+          <ATTRIBUTES>
+            <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Odmowa" mc="Standard.BpmnEndEvent" uid="97966832-ebd6-4df2-84e5-b0e5a652a523"/>
+          <ATTRIBUTES>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[Odmowa]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="EventDefinitions">
+              <OBJECT>
+                <ID name="" mc="Standard.BpmnMessageEventDefinition" uid="2e406b07-1048-4f39-a48d-0d6e61a5be85"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Decyzja o zaniechaniu" mc="Standard.BpmnTask" uid="0d5a63b3-9c49-4628-8c59-9084708fcc27"/>
+          <ATTRIBUTES>
+            <ATT name="IsGlobal">false</ATT>
+            <ATT name="IsForCompensation">false</ATT>
+            <ATT name="StartQuantity">1</ATT>
+            <ATT name="CompletionQuantity">1</ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[Decyzja o zaniechaniu]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="Standard.BpmnExclusiveGateway" uid="6c5ab759-3015-4589-8d63-da206ed34e91"/>
+          <ATTRIBUTES>
+            <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="DefaultFlow">
+              <REFOBJ>
+                <ID name="f39" mc="Standard.BpmnSequenceFlow" uid="7708f9c5-f064-4037-9b36-2ee906178aef"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
