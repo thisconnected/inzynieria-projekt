@@ -48,7 +48,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="Oferta" mc="Standard.Class" uid="a4daded3-6ea5-4ce0-9c5c-60bacc834567"/>
+                    <ID name="oferta" mc="Standard.Class" uid="a4daded3-6ea5-4ce0-9c5c-60bacc834567"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -72,7 +72,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="Zamowienie" mc="Standard.Class" uid="ccdb95b6-c30c-4f70-9962-75fd2cde70d6"/>
+                    <ID name="zamowienie" mc="Standard.Class" uid="ccdb95b6-c30c-4f70-9962-75fd2cde70d6"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -80,7 +80,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Rezygnacja" mc="Standard.Operation" uid="2fa31f4a-f2bd-4269-9170-46bb6f97045d"/>
+          <ID name="rezygnacja" mc="Standard.Operation" uid="2fa31f4a-f2bd-4269-9170-46bb6f97045d"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -88,7 +88,7 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[Rezygnacja]]></ATT>
+            <ATT name="Name"><![CDATA[rezygnacja]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -111,7 +111,70 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="Zamowienie" mc="Standard.Class" uid="ccdb95b6-c30c-4f70-9962-75fd2cde70d6"/>
+                    <ID name="zamowienie" mc="Standard.Class" uid="ccdb95b6-c30c-4f70-9962-75fd2cde70d6"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="wybierzOferte" mc="Standard.Operation" uid="d4fbb6ef-20d1-4906-ada0-644113734bb4"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[wybierzOferte]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="listaTowarow" mc="Standard.Parameter" uid="612cecba-0303-4fa9-8362-7be7bceecd13"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[listaTowarow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="oferta" mc="Standard.Class" uid="a4daded3-6ea5-4ce0-9c5c-60bacc834567"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="p2" mc="Standard.Parameter" uid="4a61c484-96b6-45df-83fe-b0700208fad8"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p2]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="oferta" mc="Standard.Class" uid="a4daded3-6ea5-4ce0-9c5c-60bacc834567"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>

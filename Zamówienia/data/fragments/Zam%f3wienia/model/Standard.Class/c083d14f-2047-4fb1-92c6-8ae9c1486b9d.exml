@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Paczka" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="paczka" version="4">
   <OBJECT>
-    <ID name="Paczka" mc="Standard.Class" uid="c083d14f-2047-4fb1-92c6-8ae9c1486b9d"/>
+    <ID name="paczka" mc="Standard.Class" uid="c083d14f-2047-4fb1-92c6-8ae9c1486b9d"/>
     <PID name="diagram klas" mc="Standard.Package" uid="eaf1053f-e78f-4960-b8a9-adbd5cd01841"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
@@ -11,7 +11,7 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[Paczka]]></ATT>
+      <ATT name="Name"><![CDATA[paczka]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
@@ -81,7 +81,7 @@
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="SuperType">
-              <ID name="Zamowienie" mc="Standard.Class" uid="ccdb95b6-c30c-4f70-9962-75fd2cde70d6"/>
+              <ID name="zamowienie" mc="Standard.Class" uid="ccdb95b6-c30c-4f70-9962-75fd2cde70d6"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>

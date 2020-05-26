@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Oferta" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="oferta" version="4">
   <OBJECT>
-    <ID name="Oferta" mc="Standard.Class" uid="a4daded3-6ea5-4ce0-9c5c-60bacc834567"/>
+    <ID name="oferta" mc="Standard.Class" uid="a4daded3-6ea5-4ce0-9c5c-60bacc834567"/>
     <PID name="diagram klas" mc="Standard.Package" uid="eaf1053f-e78f-4960-b8a9-adbd5cd01841"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
@@ -11,13 +11,13 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[Oferta]]></ATT>
+      <ATT name="Name"><![CDATA[oferta]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedAttribute">
         <OBJECT>
-          <ID name="Nazwa" mc="Standard.Attribute" uid="7df704ac-aca8-4f42-b3d9-7b4e81a600b7"/>
+          <ID name="nazwa" mc="Standard.Attribute" uid="7df704ac-aca8-4f42-b3d9-7b4e81a600b7"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -31,7 +31,7 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[Nazwa]]></ATT>
+            <ATT name="Name"><![CDATA[nazwa]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -57,7 +57,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Cena" mc="Standard.Attribute" uid="f7fb9f0b-2a7b-49c9-a1e4-1c0fa324a1b6"/>
+          <ID name="cena" mc="Standard.Attribute" uid="f7fb9f0b-2a7b-49c9-a1e4-1c0fa324a1b6"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -71,7 +71,7 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[Cena]]></ATT>
+            <ATT name="Name"><![CDATA[cena]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -81,7 +81,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Data" mc="Standard.Attribute" uid="179dedb2-569d-4213-a9be-213b5acf992f"/>
+          <ID name="data" mc="Standard.Attribute" uid="179dedb2-569d-4213-a9be-213b5acf992f"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -95,7 +95,7 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[Data]]></ATT>
+            <ATT name="Name"><![CDATA[data]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -105,7 +105,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Hurtownia" mc="Standard.Attribute" uid="cb9bf232-0db4-4f76-8597-d85ac837d5c8"/>
+          <ID name="hurtownia" mc="Standard.Attribute" uid="cb9bf232-0db4-4f76-8597-d85ac837d5c8"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -119,7 +119,7 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[Hurtownia]]></ATT>
+            <ATT name="Name"><![CDATA[hurtownia]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>

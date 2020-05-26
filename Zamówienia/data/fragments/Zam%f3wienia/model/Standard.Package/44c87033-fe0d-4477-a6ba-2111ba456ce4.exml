@@ -20,13 +20,12 @@
         <COMPID name="obsługa zamówien" mc="Standard.Actor" uid="3697d343-0c98-4368-a67c-eb0355ed7e35"/>
         <COMPID name="Hurtownia" mc="Standard.Actor" uid="cb351022-227d-4d82-a97f-98ebf9859b11"/>
         <COMPID name="Płatności" mc="Standard.Actor" uid="ed3a186b-9f48-48a3-93ec-a409a6ff4970"/>
-        <COMPID name="Kierownik" mc="Standard.Actor" uid="cfc887bf-22fa-46c9-8e30-7e85274318d4"/>
         <COMPID name="zapotrzebowanie" mc="Standard.UseCase" uid="8af31489-04ec-49bb-b7a5-03d8d287fe7d"/>
         <COMPID name="Wybranie oferty" mc="Standard.UseCase" uid="352222f0-f817-4a14-9483-85ac4a38e6d9"/>
         <COMPID name="realizacja zamowienia" mc="Standard.UseCase" uid="3774fe80-3853-4071-a7ac-89fe65e0e29f"/>
         <COMPID name="Płatność" mc="Standard.UseCase" uid="f158a3c6-0b52-4551-adca-046e6ab97b44"/>
         <COMPID name="Przedstawienie ceny" mc="Standard.UseCase" uid="53ac837d-8c40-44b0-ae49-105cf7087668"/>
-        <COMPID name="utworzenie zamówienia" mc="Standard.UseCase" uid="b4e23a12-9111-4336-968e-3eff90c03743"/>
+        <COMPID name="złozenie zamówienia" mc="Standard.UseCase" uid="b4e23a12-9111-4336-968e-3eff90c03743"/>
         <COMPID name="ZAMÓWIENIA" mc="Standard.Actor" uid="59f89f0e-a049-44ad-8284-f67a7074bacf"/>
         <COMPID name="Odebranie towaru" mc="Standard.UseCase" uid="7af5ca2b-21bc-4834-8b8d-6a952bd07759"/>
       </COMP>
