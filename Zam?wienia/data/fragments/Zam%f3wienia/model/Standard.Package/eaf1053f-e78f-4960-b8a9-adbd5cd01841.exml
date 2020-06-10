@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="diagram klas" version="4">
+  <OBJECT>
+    <ID name="diagram klas" mc="Standard.Package" uid="eaf1053f-e78f-4960-b8a9-adbd5cd01841"/>
+    <PID name="Zamówienia" mc="Standard.Project" uid="24e8c5e3-a104-48a2-a005-14fe84c6a458"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[diagram klas]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Hurtownia" mc="Standard.Class" uid="c50eedd8-fe09-405c-b185-38cec2fa1a6b"/>
+        <COMPID name="Magazyn" mc="Standard.Class" uid="822a45ad-93c7-404a-a6eb-9c13459c6a7b"/>
+        <COMPID name="oferta" mc="Standard.Class" uid="a4daded3-6ea5-4ce0-9c5c-60bacc834567"/>
+        <COMPID name="zamowienie" mc="Standard.Class" uid="ccdb95b6-c30c-4f70-9962-75fd2cde70d6"/>
+        <COMPID name="paczka" mc="Standard.Class" uid="c083d14f-2047-4fb1-92c6-8ae9c1486b9d"/>
+        <COMPID name="obslugaHurtowni" mc="Standard.Class" uid="93b68a8b-4468-4a9d-996b-043452d7adb1"/>
+        <COMPID name="obslugaZamowienia" mc="Standard.Class" uid="7595cede-6988-4d78-81dd-61a8c2eda7a4"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="diagram klas Class diagram" mc="Standard.ClassDiagram" uid="65c45ab8-1f76-4dce-a9e9-62c76bf3e0e6"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

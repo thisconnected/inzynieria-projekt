@@ -104,9 +104,6 @@
                       <ID name="" mc="Standard.BpmnEventBasedGateway" uid="d15b8a4b-bc7f-4b40-8398-520e5f66542d"/>
                     </REFOBJ>
                     <REFOBJ>
-                      <ID name="Potwierdzenie platnosci" mc="Standard.BpmnIntermediateCatchEvent" uid="bb8f22de-6792-4618-a0a3-f9358d385807"/>
-                    </REFOBJ>
-                    <REFOBJ>
                       <ID name="1 dzien" mc="Standard.BpmnIntermediateCatchEvent" uid="250f8de0-a86e-4bdd-ae4f-f146ad87c653"/>
                     </REFOBJ>
                     <REFOBJ>
@@ -394,25 +391,7 @@
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="Descriptor">
-              <OBJECT>
-                <ID name="Note" mc="Infrastructure.Note" uid="47266e66-193f-4f30-acb9-b58088995df4"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[<p>Tutaj jak usuniemy ta zlozona bramke to nie wiem jak synchronizacja bedzie dzialac tych X instancji ktore ceny wysyłaja</p><p>2020-05-13</p><p><del>Mysle ze to w sam podproces z &quot;cancel remaining&quot;</del></p><p>2020-05-17</p>
-]]></ATT>
-                  <ATT name="MimeType"><![CDATA[text/html]]></ATT>
-                  <ATT name="Name"><![CDATA[Note]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
+          <DEPENDENCIES></DEPENDENCIES>
         </OBJECT>
         <OBJECT>
           <ID name="f8" mc="Standard.BpmnSequenceFlow" uid="d4f9b019-11bd-4fd5-842a-0d6f9afa95cd"/>
@@ -1143,27 +1122,6 @@
           <DEPENDENCIES></DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Potwierdzenie platnosci" mc="Standard.BpmnIntermediateCatchEvent" uid="bb8f22de-6792-4618-a0a3-f9358d385807"/>
-          <ATTRIBUTES>
-            <ATT name="ParallelMultiple">false</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[Potwierdzenie platnosci]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="EventDefinitions">
-              <OBJECT>
-                <ID name="" mc="Standard.BpmnMessageEventDefinition" uid="1b1891f8-f763-4688-95eb-fb8c67486e22"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
           <ID name="1 dzien" mc="Standard.BpmnIntermediateCatchEvent" uid="250f8de0-a86e-4bdd-ae4f-f146ad87c653"/>
           <ATTRIBUTES>
             <ATT name="ParallelMultiple">false</ATT>
@@ -1205,50 +1163,6 @@
             <LINK relation="TargetRef">
               <REFOBJ>
                 <ID name="1 dzien" mc="Standard.BpmnIntermediateCatchEvent" uid="250f8de0-a86e-4bdd-ae4f-f146ad87c653"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="f41" mc="Standard.BpmnSequenceFlow" uid="4aa04f6c-0b48-4cff-99ae-b1680d8db6ee"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f41]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="" mc="Standard.BpmnEventBasedGateway" uid="d15b8a4b-bc7f-4b40-8398-520e5f66542d"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="Potwierdzenie platnosci" mc="Standard.BpmnIntermediateCatchEvent" uid="bb8f22de-6792-4618-a0a3-f9358d385807"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="f42" mc="Standard.BpmnSequenceFlow" uid="58dcb711-a9c0-466b-b3c7-249de4f5ddc9"/>
-          <ATTRIBUTES>
-            <ATT name="IsImmediate">false</ATT>
-            <ATT name="ConditionExpression"></ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[f42]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SourceRef">
-              <REFOBJ>
-                <ID name="Potwierdzenie platnosci" mc="Standard.BpmnIntermediateCatchEvent" uid="bb8f22de-6792-4618-a0a3-f9358d385807"/>
-              </REFOBJ>
-            </LINK>
-            <LINK relation="TargetRef">
-              <REFOBJ>
-                <ID name="Towar zamówiony" mc="Standard.BpmnIntermediateThrowEvent" uid="db1301af-4f96-465f-8b85-f9b7fee7650c"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
@@ -1719,20 +1633,6 @@
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
-              <OBJECT>
-                <ID name="Note" mc="Infrastructure.Note" uid="b2c0a7e4-2a12-464e-a011-c8bd130080b0"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[Informacja do magazynu o dostępności lub zakup towaru w zależności od oczekiwań magazynu]]></ATT>
-                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
-                  <ATT name="Name"><![CDATA[Note]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -1909,6 +1809,28 @@
             <LINK relation="DefaultFlow">
               <REFOBJ>
                 <ID name="f39" mc="Standard.BpmnSequenceFlow" uid="7708f9c5-f064-4037-9b36-2ee906178aef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="f1" mc="Standard.BpmnSequenceFlow" uid="3bdb3d8f-e888-4781-8967-663764e80d37"/>
+          <ATTRIBUTES>
+            <ATT name="IsImmediate">false</ATT>
+            <ATT name="ConditionExpression"></ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[f1]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="" mc="Standard.BpmnEventBasedGateway" uid="d15b8a4b-bc7f-4b40-8398-520e5f66542d"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="Towar zamówiony" mc="Standard.BpmnIntermediateThrowEvent" uid="db1301af-4f96-465f-8b85-f9b7fee7650c"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>

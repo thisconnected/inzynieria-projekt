@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="zamówienia" version="4">
+  <OBJECT>
+    <ID name="zamówienia" mc="Standard.Package" uid="12b18c5f-2680-49af-8141-67a85d6a1810"/>
+    <PID name="Zamówienia" mc="Standard.Project" uid="24e8c5e3-a104-48a2-a005-14fe84c6a458"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[zamówienia]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="kupic z hurtowni" mc="Standard.BpmnProcess" uid="ad70bb3b-1b01-4185-a200-a8416479f1a7"/>
+        <COMPID name="realizacja zamowienia" mc="Standard.BpmnProcess" uid="9b6a470a-ece9-421e-a966-11a7d56d243b"/>
+        <COMPID name="Collaboration" mc="Standard.BpmnCollaboration" uid="65b42a00-3117-423d-a7e8-c884f18ff5e1"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

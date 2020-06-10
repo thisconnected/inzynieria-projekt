@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Collaboration" version="4">
+  <OBJECT>
+    <ID name="Collaboration" mc="Standard.BpmnCollaboration" uid="47c175bd-02cd-450f-ab75-f11770a967d0"/>
+    <PID name="Model" mc="Standard.Package" uid="54ea0f82-b87c-4d9c-b00d-ac3e92e2d5c2"/>
+    <ATTRIBUTES>
+      <ATT name="IsClosed">false</ATT>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[Collaboration]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Product">
+        <COMPID name="Zamówienia_2" mc="Standard.BpmnCollaborationDiagram" uid="3592ec79-8ca6-40bf-82c2-b8d032d6b582"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

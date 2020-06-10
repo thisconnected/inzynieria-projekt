@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Collaboration" version="4">
+  <OBJECT>
+    <ID name="Collaboration" mc="Standard.BpmnCollaboration" uid="65b42a00-3117-423d-a7e8-c884f18ff5e1"/>
+    <PID name="zamówienia" mc="Standard.Package" uid="12b18c5f-2680-49af-8141-67a85d6a1810"/>
+    <ATTRIBUTES>
+      <ATT name="IsClosed">false</ATT>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[Collaboration]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="MessageFlow">
+        <OBJECT>
+          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="dc30a3b8-184c-4232-af5e-af710f9b0960"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="TargetRef">
+              <REFOBJ>
+                <ID name="Start" mc="Standard.BpmnStartEvent" uid="5852bb9a-425e-46b5-a731-c1be38de9107"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="ed933a4e-349c-4240-a846-460d104a6ccd"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="Cena" mc="Standard.BpmnEndEvent" uid="04d93794-e67b-4343-8722-0b1fa86a1b46"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Message Flow" mc="Standard.BpmnMessageFlow" uid="4797c290-01a2-4989-9da5-7abeb6433580"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SourceRef">
+              <REFOBJ>
+                <ID name="Brak produktu" mc="Standard.BpmnEndEvent" uid="51132d50-3e72-480e-bf48-3d0974d8c173"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Participants">
+        <OBJECT>
+          <ID name="kupic z hurtowni" mc="Standard.BpmnParticipant" uid="b4848295-ee0b-4d63-a989-0e4653538824"/>
+          <ATTRIBUTES>
+            <ATT name="MultiplicityMin">0</ATT>
+            <ATT name="MultiplicityMax">0</ATT>
+            <ATT name="Name"><![CDATA[kupic z hurtowni]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Process">
+              <ID name="kupic z hurtowni" mc="Standard.BpmnProcess" uid="ad70bb3b-1b01-4185-a200-a8416479f1a7"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Hurtownia" mc="Standard.BpmnParticipant" uid="59f53604-50dc-48cc-90df-78c7c1edb2b9"/>
+          <ATTRIBUTES>
+            <ATT name="MultiplicityMin">0</ATT>
+            <ATT name="MultiplicityMax">0</ATT>
+            <ATT name="Name"><![CDATA[Hurtownia]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Process">
+              <ID name="Hurtownia" mc="Standard.BpmnProcess" uid="7d35f03c-1294-4031-b4bc-82fbfe206ba2"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Hurtownia zamowienie" mc="Standard.BpmnParticipant" uid="32a0d243-dc20-4916-9537-fc5516a28b67"/>
+          <ATTRIBUTES>
+            <ATT name="MultiplicityMin">0</ATT>
+            <ATT name="MultiplicityMax">0</ATT>
+            <ATT name="Name"><![CDATA[Hurtownia zamowienie]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Process">
+              <ID name="Hurtownia zamowienie" mc="Standard.BpmnProcess" uid="fec64fee-ac5e-4080-ae4a-dce9debb69c4"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Invoking process" mc="Standard.BpmnParticipant" uid="1cc41cbc-79a8-423d-87c5-c4d0e06e90b2"/>
+          <ATTRIBUTES>
+            <ATT name="MultiplicityMin">0</ATT>
+            <ATT name="MultiplicityMax">0</ATT>
+            <ATT name="Name"><![CDATA[Invoking process]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Process">
+              <ID name="Invoking process" mc="Standard.BpmnProcess" uid="416172f8-73af-4664-9882-02ecf7a0a296"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name=" Collaboration" mc="Standard.BpmnCollaborationDiagram" uid="108a6a83-44aa-4dd7-a9be-8c84ab136355"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
