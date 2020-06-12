@@ -74,13 +74,7 @@
                 <DEPENDENCIES>
                   <LINK relation="FlowElementRef">
                     <REFOBJ>
-                      <ID name="Oczekiwanie na towar" mc="Standard.BpmnTask" uid="c8bb071c-959d-4979-930a-06d3f91f21f7"/>
-                    </REFOBJ>
-                    <REFOBJ>
                       <ID name="" mc="Standard.BpmnEndEvent" uid="4d9d257c-f249-4b76-9096-aa95c4802391"/>
-                    </REFOBJ>
-                    <REFOBJ>
-                      <ID name="Towar nie dotarł" mc="Standard.BpmnIntermediateThrowEvent" uid="35280a36-35d3-4bbb-ada1-6f6e62e39b74"/>
                     </REFOBJ>
                     <REFOBJ>
                       <ID name="Towar zamówiony" mc="Standard.BpmnIntermediateThrowEvent" uid="db1301af-4f96-465f-8b85-f9b7fee7650c"/>
@@ -113,16 +107,7 @@
                       <ID name="Potwierdzenie zamowienia" mc="Standard.BpmnIntermediateCatchEvent" uid="4693736a-a01f-41d7-89c4-964eb570e4e8"/>
                     </REFOBJ>
                     <REFOBJ>
-                      <ID name="" mc="Standard.BpmnEventBasedGateway" uid="39c6be8b-6665-4039-8bb8-7ae9bec30a23"/>
-                    </REFOBJ>
-                    <REFOBJ>
                       <ID name="Rezegnacja" mc="Standard.BpmnIntermediateCatchEvent" uid="1b3a0028-d2ef-4c9f-8bd0-966c36297d1e"/>
-                    </REFOBJ>
-                    <REFOBJ>
-                      <ID name="14 dni" mc="Standard.BpmnIntermediateCatchEvent" uid="05eef70b-040f-4b6e-bfcd-c694564370d6"/>
-                    </REFOBJ>
-                    <REFOBJ>
-                      <ID name="Towar dotarł" mc="Standard.BpmnIntermediateCatchEvent" uid="20a303b4-3725-449f-9c4c-c0fe94adb4e3"/>
                     </REFOBJ>
                     <REFOBJ>
                       <ID name="Wycofanie zamówienia z hurtowni" mc="Standard.BpmnIntermediateThrowEvent" uid="8b28b490-757e-461c-b9e3-3ebca6da279b"/>
@@ -143,13 +128,63 @@
                       <ID name="Odmowa" mc="Standard.BpmnEndEvent" uid="97966832-ebd6-4df2-84e5-b0e5a652a523"/>
                     </REFOBJ>
                     <REFOBJ>
-                      <ID name="Decyzja o zaniechaniu" mc="Standard.BpmnTask" uid="0d5a63b3-9c49-4628-8c59-9084708fcc27"/>
+                      <ID name="" mc="Standard.BpmnExclusiveGateway" uid="6c5ab759-3015-4589-8d63-da206ed34e91"/>
                     </REFOBJ>
                     <REFOBJ>
-                      <ID name="" mc="Standard.BpmnExclusiveGateway" uid="6c5ab759-3015-4589-8d63-da206ed34e91"/>
+                      <ID name="Decyzja o zaniechaniu" mc="Standard.BpmnTask" uid="0d5a63b3-9c49-4628-8c59-9084708fcc27"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Descriptor">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.Note" uid="a50b835d-8e19-4cf4-93cd-14fc398ac42a"/>
+                      <ATTRIBUTES>
+                        <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+                        <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Model">
+                          <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Magazyn" mc="Standard.BpmnLane" uid="2e8e7b66-4d9b-431c-8aee-190db1c40d19"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Magazyn]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="FlowElementRef">
+                    <REFOBJ>
+                      <ID name="Oczekiwanie na towar" mc="Standard.BpmnTask" uid="c8bb071c-959d-4979-930a-06d3f91f21f7"/>
+                    </REFOBJ>
+                    <REFOBJ>
+                      <ID name="" mc="Standard.BpmnEventBasedGateway" uid="39c6be8b-6665-4039-8bb8-7ae9bec30a23"/>
+                    </REFOBJ>
+                    <REFOBJ>
+                      <ID name="Towar dotarł" mc="Standard.BpmnIntermediateCatchEvent" uid="20a303b4-3725-449f-9c4c-c0fe94adb4e3"/>
+                    </REFOBJ>
+                    <REFOBJ>
+                      <ID name="14 dni" mc="Standard.BpmnIntermediateCatchEvent" uid="05eef70b-040f-4b6e-bfcd-c694564370d6"/>
+                    </REFOBJ>
+                    <REFOBJ>
+                      <ID name="Towar nie dotarł" mc="Standard.BpmnIntermediateThrowEvent" uid="35280a36-35d3-4bbb-ada1-6f6e62e39b74"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Lane1" mc="Standard.BpmnLane" uid="06e45aab-21b7-46e3-9cfa-89de2ff735b4"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Lane1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
             </COMP>
           </DEPENDENCIES>
@@ -786,19 +821,6 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Oczekiwanie na towar" mc="Standard.BpmnTask" uid="c8bb071c-959d-4979-930a-06d3f91f21f7"/>
-          <ATTRIBUTES>
-            <ATT name="IsGlobal">false</ATT>
-            <ATT name="IsForCompensation">false</ATT>
-            <ATT name="StartQuantity">1</ATT>
-            <ATT name="CompletionQuantity">1</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[Oczekiwanie na towar]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES></DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
           <ID name="" mc="Standard.BpmnEndEvent" uid="4d9d257c-f249-4b76-9096-aa95c4802391"/>
           <ATTRIBUTES>
             <ATT name="TriggeredByEvent">false</ATT>
@@ -806,26 +828,6 @@
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES></DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="Towar nie dotarł" mc="Standard.BpmnIntermediateThrowEvent" uid="35280a36-35d3-4bbb-ada1-6f6e62e39b74"/>
-          <ATTRIBUTES>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[Towar nie dotarł]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="EventDefinitions">
-              <OBJECT>
-                <ID name="" mc="Standard.BpmnMessageEventDefinition" uid="f1467799-875e-441a-8102-00c49629d16a"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
           <ID name="Towar zamówiony" mc="Standard.BpmnIntermediateThrowEvent" uid="db1301af-4f96-465f-8b85-f9b7fee7650c"/>
@@ -1209,18 +1211,6 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="" mc="Standard.BpmnEventBasedGateway" uid="39c6be8b-6665-4039-8bb8-7ae9bec30a23"/>
-          <ATTRIBUTES>
-            <ATT name="Instanciate">false</ATT>
-            <ATT name="EventGatewayType">ExclusiveGateway</ATT>
-            <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES></DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
           <ID name="Rezegnacja" mc="Standard.BpmnIntermediateCatchEvent" uid="1b3a0028-d2ef-4c9f-8bd0-966c36297d1e"/>
           <ATTRIBUTES>
             <ATT name="ParallelMultiple">false</ATT>
@@ -1232,51 +1222,6 @@
             <COMP relation="EventDefinitions">
               <OBJECT>
                 <ID name="" mc="Standard.BpmnMessageEventDefinition" uid="1b3d41e0-ead7-49b5-bc4e-2c58afd294bd"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="14 dni" mc="Standard.BpmnIntermediateCatchEvent" uid="05eef70b-040f-4b6e-bfcd-c694564370d6"/>
-          <ATTRIBUTES>
-            <ATT name="ParallelMultiple">false</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[14 dni]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="EventDefinitions">
-              <OBJECT>
-                <ID name="" mc="Standard.BpmnTimerEventDefinition" uid="1d51916f-95a2-42ba-9aef-9c2ed7a983a0"/>
-                <ATTRIBUTES>
-                  <ATT name="TimeCycle"></ATT>
-                  <ATT name="TimeDate"></ATT>
-                  <ATT name="TimeDuration"></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="Towar dotarł" mc="Standard.BpmnIntermediateCatchEvent" uid="20a303b4-3725-449f-9c4c-c0fe94adb4e3"/>
-          <ATTRIBUTES>
-            <ATT name="ParallelMultiple">false</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[Towar dotarł]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="EventDefinitions">
-              <OBJECT>
-                <ID name="" mc="Standard.BpmnMessageEventDefinition" uid="25530785-b7bd-4c3a-8e06-affea8d7fc03"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -1785,19 +1730,6 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Decyzja o zaniechaniu" mc="Standard.BpmnTask" uid="0d5a63b3-9c49-4628-8c59-9084708fcc27"/>
-          <ATTRIBUTES>
-            <ATT name="IsGlobal">false</ATT>
-            <ATT name="IsForCompensation">false</ATT>
-            <ATT name="StartQuantity">1</ATT>
-            <ATT name="CompletionQuantity">1</ATT>
-            <ATT name="TriggeredByEvent">false</ATT>
-            <ATT name="Name"><![CDATA[Decyzja o zaniechaniu]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES></DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
           <ID name="" mc="Standard.BpmnExclusiveGateway" uid="6c5ab759-3015-4589-8d63-da206ed34e91"/>
           <ATTRIBUTES>
             <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
@@ -1834,6 +1766,109 @@
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Oczekiwanie na towar" mc="Standard.BpmnTask" uid="c8bb071c-959d-4979-930a-06d3f91f21f7"/>
+          <ATTRIBUTES>
+            <ATT name="IsGlobal">false</ATT>
+            <ATT name="IsForCompensation">false</ATT>
+            <ATT name="StartQuantity">1</ATT>
+            <ATT name="CompletionQuantity">1</ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[Oczekiwanie na towar]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="Standard.BpmnEventBasedGateway" uid="39c6be8b-6665-4039-8bb8-7ae9bec30a23"/>
+          <ATTRIBUTES>
+            <ATT name="Instanciate">false</ATT>
+            <ATT name="EventGatewayType">ExclusiveGateway</ATT>
+            <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Towar dotarł" mc="Standard.BpmnIntermediateCatchEvent" uid="20a303b4-3725-449f-9c4c-c0fe94adb4e3"/>
+          <ATTRIBUTES>
+            <ATT name="ParallelMultiple">false</ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[Towar dotarł]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="EventDefinitions">
+              <OBJECT>
+                <ID name="" mc="Standard.BpmnMessageEventDefinition" uid="25530785-b7bd-4c3a-8e06-affea8d7fc03"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="14 dni" mc="Standard.BpmnIntermediateCatchEvent" uid="05eef70b-040f-4b6e-bfcd-c694564370d6"/>
+          <ATTRIBUTES>
+            <ATT name="ParallelMultiple">false</ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[14 dni]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="EventDefinitions">
+              <OBJECT>
+                <ID name="" mc="Standard.BpmnTimerEventDefinition" uid="1d51916f-95a2-42ba-9aef-9c2ed7a983a0"/>
+                <ATTRIBUTES>
+                  <ATT name="TimeCycle"></ATT>
+                  <ATT name="TimeDate"></ATT>
+                  <ATT name="TimeDuration"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Towar nie dotarł" mc="Standard.BpmnIntermediateThrowEvent" uid="35280a36-35d3-4bbb-ada1-6f6e62e39b74"/>
+          <ATTRIBUTES>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[Towar nie dotarł]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="EventDefinitions">
+              <OBJECT>
+                <ID name="" mc="Standard.BpmnMessageEventDefinition" uid="f1467799-875e-441a-8102-00c49629d16a"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Decyzja o zaniechaniu" mc="Standard.BpmnTask" uid="0d5a63b3-9c49-4628-8c59-9084708fcc27"/>
+          <ATTRIBUTES>
+            <ATT name="IsGlobal">false</ATT>
+            <ATT name="IsForCompensation">false</ATT>
+            <ATT name="StartQuantity">1</ATT>
+            <ATT name="CompletionQuantity">1</ATT>
+            <ATT name="TriggeredByEvent">false</ATT>
+            <ATT name="Name"><![CDATA[Decyzja o zaniechaniu]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
         </OBJECT>
       </COMP>
       <COMP relation="Product">
